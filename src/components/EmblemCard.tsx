@@ -8,7 +8,7 @@ const EmblemCard = ({ability, pokemon}: Props) => {
   const {id, lv, positive, negative} = ability
 
   return (
-    <li className='bg-white list-none w-48 h-32 rounded-lg shadow-custom p-3
+    <li className='bg-light-4 list-none w-48 h-32 rounded-lg shadow-custom p-3
     flex justify-between border-1 border-transparent hover:border-light-3'>
       <div className='detail flex flex-col text-xs text-custom-black'>
         <h6 className='text-sm font-bold tracking-wide text-light-2'>{id}</h6>
