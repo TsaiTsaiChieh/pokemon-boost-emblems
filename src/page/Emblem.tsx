@@ -1,4 +1,4 @@
-import EmblemList from "../components/EmblemList"
+import EmblemList from '../components/EmblemList'
 
 const Emblem = () => {
   return (
