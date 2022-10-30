@@ -1,0 +1,144 @@
+{
+  "abilities": [
+    {
+      "id": "001",
+      "lv": 1,
+      "positive": "特攻 +1.5",
+      "negative": "體力 -30"
+    },
+    {
+      "id": "001",
+      "lv": 2,
+      "positive": "特攻 +2.5",
+      "negative": "體力 -40"
+    },
+    {
+      "id": "001",
+      "lv": 3,
+      "positive": "特攻 +3",
+      "negative": "體力 -50"
+    },
+    {
+      "id": "002",
+      "lv": 1,
+      "positive": "特攻 +1.5",
+      "negative": "防禦 -3"
+    },
+    {
+      "id": "002",
+      "lv": 2,
+      "positive": "特攻 +2.5",
+      "negative": "防禦 -4"
+    },
+    {
+      "id": "002",
+      "lv": 3,
+      "positive": "特攻 +3",
+      "negative": "防禦 -5"
+    },
+    {
+      "id": "003",
+      "lv": 1,
+      "positive": "特攻 +1.5",
+      "negative": "攻擊 -1"
+    },
+    {
+      "id": "003",
+      "lv": 2,
+      "positive": "特攻 +2.5",
+      "negative": "攻擊 -1.5"
+    },
+    {
+      "id": "003",
+      "lv": 3,
+      "positive": "特攻 +3",
+      "negative": "攻擊 -2"
+    },
+    {
+      "id": "004",
+      "lv": 1,
+      "positive": "體力 +30",
+      "negative": "攻擊 -1"
+    },
+    {
+      "id": "004",
+      "lv": 2,
+      "positive": "體力 +40",
+      "negative": "攻擊 -1.5"
+    },
+    {
+      "id": "004",
+      "lv": 3,
+      "positive": "體力 +50",
+      "negative": "攻擊 -2"
+    },
+    {
+      "id": "005",
+      "lv": 1,
+      "positive": "體力 +30",
+      "negative": "特防 -3"
+    },
+    {
+      "id": "005",
+      "lv": 2,
+      "positive": "體力 +40",
+      "negative": "特防 -4"
+    },
+    {
+      "id": "005",
+      "lv": 3,
+      "positive": "體力 +50",
+      "negative": "特防 -5"
+    },
+    {
+      "id": "006",
+      "lv": 1,
+      "positive": "體力 +30",
+      "negative": "防禦 -3"
+    },
+    {
+      "id": "006",
+      "lv": 2,
+      "positive": "體力 +40",
+      "negative": "防禦 -4"
+    },
+    {
+      "id": "006",
+      "lv": 3,
+      "positive": "體力 +50",
+      "negative": "防禦 -5"
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "001",
+      "name": "妙蛙種子",
+      "categories": [1]
+    },
+    {
+      "id": "002",
+      "name": "妙蛙草",
+      "categories": [1]
+    },
+    {
+      "id": "003",
+      "name": "妙蛙花",
+      "categories": [1]
+    },
+    {
+      "id": "004",
+      "name": "小火龍",
+      "categories": [3]
+    },
+    {
+      "id": "005",
+      "name": "火恐龍",
+      "categories": [3]
+    },
+    {
+      "id": "006",
+      "name": "噴火龍",
+      "categories": [3]
+    }
+  ]
+}
