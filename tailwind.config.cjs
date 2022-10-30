@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -19,7 +19,10 @@ module.exports = {
         'dark-4': '#F1E0AC',
       },
       boxShadow: {
-        'custom': '0px 10px 10px #EDEDED'
+        'custom': '0px 10px 10px #EDEDED',
+      },
+      borderWidth: {
+        '1': '1px',
       },
     },
   },
