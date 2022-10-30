@@ -8,7 +8,7 @@ const EmblemList = () => {
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
 
   return (
-    <ul className='flex flex-wrap bg-light-4 gap-4 justify-center'>
+    <ul className='flex flex-wrap gap-4 justify-center'>
       {abilities.map((ele, i) => (
         <EmblemCard
           key={i}
