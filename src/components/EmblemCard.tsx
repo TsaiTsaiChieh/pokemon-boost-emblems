@@ -18,7 +18,7 @@ const EmblemCard = ({ability, pokemon}: Props) => {
           <img
             key={i}
             className='w-6'
-            src={`/imgs/emblems/color/${ele}.png`}
+            src={`imgs/emblems/color/${ele}.png`}
             alt={ele.toString()}
           />
         ))}
@@ -26,7 +26,7 @@ const EmblemCard = ({ability, pokemon}: Props) => {
       <div className='pokemon flex flex-col items-center'>
         <img
           className='w-20'
-          src={`/imgs/emblems/${Level[lv]}/${parseInt(id)}.png`}
+          src={`imgs/emblems/${Level[lv]}/${parseInt(id)}.png`}
           alt={pokemon.name}
         />
         <label className='text-sm text-light-2 tracking-wide'>
