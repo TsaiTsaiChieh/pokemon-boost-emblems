@@ -1,7 +1,6 @@
-import Emblem from "./page/Emblem"
+import Emblem from './page/Emblem'
 
 const App = () => {
-
   return (
     <>
       <Emblem />
