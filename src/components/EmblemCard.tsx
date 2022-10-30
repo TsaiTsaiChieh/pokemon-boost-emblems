@@ -9,7 +9,7 @@ const EmblemCard = ({ability, pokemon}: Props) => {
 
   return (
     <li className='bg-white list-none w-48 h-32 rounded-lg shadow-custom p-3
-    flex justify-between border-1 hover:border-light-3'>
+    flex justify-between border-1 border-transparent hover:border-light-3'>
       <div className='detail flex flex-col text-xs text-custom-black'>
         <h6 className='text-sm font-bold tracking-wide text-light-2'>{id}</h6>
         <span className='mt-3'>{positive}</span>
