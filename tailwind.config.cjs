@@ -8,25 +8,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-gray-50': '#EDEDED',
-        'custom-black': '#242424',
-        'light-1': '#242424',
-        'light-2': '#99A799',
-        'light-3': '#D3E4CD',
-        'light-4': '#FEF5ED',
-        'dark-1': '#495371',
-        'dark-2': '#74959A',
-        'dark-3': '#98B4AA',
-        'dark-4': '#F1E0AC',
+        'light-1': '#013237',
+        'light-2': '#4CA771',
+        'light-3': '#C0E6BA',
+        'light-4': '#EAF9E7',
+        'dark-1': '#526260',
+        'dark-2': '#75898A',
+        'dark-3': '#92A2A3',
+        'dark-4': '#ECECED',
       },
       boxShadow: {
-        'light': '0px 10px 10px #99A799',
-        'dark': '0px 10px 10px #98B4AA',
+        'light': '0px 10px 10px #b2b2b2',
+        'dark': '0px 10px 10px #2f3737',
       },
-      borderWidth: {
-        '1': '1px',
+      backgroundImage: {
+        'texture': 'url(\'/imgs/texture.png\')',
+        'gloss': 'url(\'/imgs/gloss.png\')',
+      },
+      height: {
+        '478': '478px',
       },
     },
   },
   plugins: [],
 }
+
+
