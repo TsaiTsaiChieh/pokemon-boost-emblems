@@ -14,8 +14,8 @@ module.exports = {
         'light-4': '#EAF9E7',
         'dark-1': '#526260',
         'dark-2': '#75898A',
-        'dark-3': '#92A2A3',
-        'dark-4': '#ECECED',
+        'dark-3': '#ECECED',
+        'dark-4': '#9ADAD2',
       },
       boxShadow: {
         'light': '0px 10px 10px #b2b2b2',
