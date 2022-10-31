@@ -9,8 +9,8 @@ const EmblemCard = ({ability, pokemon}: Props) => {
 
   return (
     <li
-      className='bg-white list-none w-48 h-32 rounded-lg shadow-light p-3
-    flex justify-between border-2 border-transparent hover:border-light-2
+      className='bg-white list-none w-52 h-32 rounded-lg shadow-light p-3
+    flex justify-between border-2 border-transparent hover:border-light-1
     dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
     >
       <div className='detail flex flex-col text-xs text-light-2
@@ -23,14 +23,16 @@ const EmblemCard = ({ability, pokemon}: Props) => {
         </h6>
         <span className='mt-3'>{positive}</span>
         <span className='mb-3'>{negative}</span>
-        {pokemon.categories.map((ele, i) => (
-          <img
-            key={i}
-            className='w-6'
-            src={`imgs/emblems/color/${ele}.png`}
-            alt={ele.toString()}
-          />
-        ))}
+        <div className='categories flex'>
+          {pokemon.categories.map((ele, i) => (
+            <img
+              key={i}
+              className='w-6'
+              src={`imgs/emblems/color/${ele}.png`}
+              alt={ele.toString()}
+            />
+          ))}
+        </div>
       </div>
       <div className='pokemon flex flex-col items-center'>
         <img
