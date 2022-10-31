@@ -9,14 +9,14 @@ const EmblemCard = ({ability, pokemon}: Props) => {
 
   return (
     <li
-      className='bg-light-4 list-none w-48 h-32 rounded-lg shadow-light p-3
-    flex justify-between border-1 border-transparent hover:border-light-3
+      className='bg-white list-none w-48 h-32 rounded-lg shadow-light p-3
+    flex justify-between border-2 border-transparent hover:border-light-2
     dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
     >
-      <div className='detail flex flex-col text-xs text-custom-black
+      <div className='detail flex flex-col text-xs text-light-2
       dark:text-white'>
         <h6
-          className='text-sm font-bold tracking-wide text-light-2
+          className='text-sm font-bold tracking-wide text-light-1
         dark:text-dark-4'
         >
           {id}
@@ -38,7 +38,7 @@ const EmblemCard = ({ability, pokemon}: Props) => {
           src={`imgs/emblems/${Level[lv]}/${parseInt(id)}.png`}
           alt={pokemon.name}
         />
-        <label className='text-sm text-light-2 tracking-wide dark:text-dark-4'>
+        <label className='text-sm text-light-1 tracking-wide dark:text-dark-4'>
           {pokemon.name}
         </label>
       </div>
