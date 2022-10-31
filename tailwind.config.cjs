@@ -20,7 +20,8 @@ module.exports = {
         'dark-4': '#F1E0AC',
       },
       boxShadow: {
-        'custom': '0px 10px 10px #99A799',
+        'light': '0px 10px 10px #99A799',
+        'dark': '0px 10px 10px #98B4AA',
       },
       borderWidth: {
         '1': '1px',
