@@ -11,7 +11,14 @@ const App = () => {
   }, [theme])
 
   return (
-    <div className='bg-light-3 min-h-screen dark:bg-dark-1'>
+    <div
+      className='bg-light-4 dark:bg-dark-1 min-h-screen
+    bg-texture w-full relative'
+    >
+      {/* <div
+        id='gloss'
+        className='w-full h-478 fixed bg-gloss'
+      ></div> */}
       <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         {theme} Mode
       </button>
