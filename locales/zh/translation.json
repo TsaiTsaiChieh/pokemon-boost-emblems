@@ -107,6 +107,114 @@
       "lv": 3,
       "positive": "體力 +50",
       "negative": "防禦 -5"
+    },
+    {
+      "id": "007",
+      "lv": 1,
+      "positive": "特攻 +1.5",
+      "negative": "體力 -30"
+    },
+    {
+      "id": "007",
+      "lv": 2,
+      "positive": "特攻 +2.5",
+      "negative": "體力 -40"
+    },
+    {
+      "id": "007",
+      "lv": 3,
+      "positive": "特攻 +3",
+      "negative": "體力 -50"
+    },
+    {
+      "id": "008",
+      "lv": 1,
+      "positive": "特攻 +1.5",
+      "negative": "防禦 -3"
+    },
+    {
+      "id": "008",
+      "lv": 2,
+      "positive": "特攻 +2.5",
+      "negative": "防禦 -4"
+    },
+    {
+      "id": "008",
+      "lv": 3,
+      "positive": "特攻 +3",
+      "negative": "防禦 -5"
+    },
+    {
+      "id": "009",
+      "lv": 1,
+      "positive": "特攻 +1.5",
+      "negative": "擊中要害率 -0.6%"
+    },
+    {
+      "id": "009",
+      "lv": 2,
+      "positive": "特攻 +2.5",
+      "negative": "擊中要害率 -0.8%"
+    },
+    {
+      "id": "009",
+      "lv": 3,
+      "positive": "特攻 +3",
+      "negative": "擊中要害率 -1%"
+    },
+    {
+      "id": "010",
+      "lv": 1,
+      "positive": "防禦 +3",
+      "negative": "體力 -30"
+    },
+    {
+      "id": "010",
+      "lv": 2,
+      "positive": "防禦 +4",
+      "negative": "體力 -40"
+    },
+    {
+      "id": "010",
+      "lv": 3,
+      "positive": "防禦 +5",
+      "negative": "體力 -50"
+    },
+    {
+      "id": "011",
+      "lv": 1,
+      "positive": "防禦 +3",
+      "negative": "移動速度 -21"
+    },
+    {
+      "id": "011",
+      "lv": 2,
+      "positive": "防禦 +4",
+      "negative": "移動速度 -28"
+    },
+    {
+      "id": "011",
+      "lv": 3,
+      "positive": "防禦 +5",
+      "negative": "移動速度 -35"
+    },
+    {
+      "id": "012",
+      "lv": 1,
+      "positive": "防禦 +3",
+      "negative": "攻擊 -1"
+    },
+    {
+      "id": "012",
+      "lv": 2,
+      "positive": "防禦 +4",
+      "negative": "攻擊 -1.5"
+    },
+    {
+      "id": "012",
+      "lv": 3,
+      "positive": "防禦 +5",
+      "negative": "攻擊 -2"
     }
   ],
   "pokemon": [
@@ -139,6 +247,36 @@
       "id": "006",
       "name": "噴火龍",
       "categories": [3]
+    },
+    {
+      "id": "007",
+      "name": "傑尼龜",
+      "categories": [4]
+    },
+    {
+      "id": "008",
+      "name": "卡咪龜",
+      "categories": [4]
+    },
+    {
+      "id": "009",
+      "name": "水箭龜",
+      "categories": [4]
+    },
+    {
+      "id": "010",
+      "name": "綠毛蟲",
+      "categories": [1]
+    },
+    {
+      "id": "011",
+      "name": "鐵甲蛹",
+      "categories": [1]
+    },
+    {
+      "id": "012",
+      "name": "巴大蝶",
+      "categories": [1, 5]
     }
   ]
 }
