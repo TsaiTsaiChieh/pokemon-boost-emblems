@@ -1,5 +1,9 @@
 import {combineReducers} from '@reduxjs/toolkit'
 
-const rootReducer = combineReducers({})
+import persistReducer from './reducers/persistSlice'
+
+const rootReducer = combineReducers({
+  persist: persistReducer,
+})
 
 export default rootReducer
