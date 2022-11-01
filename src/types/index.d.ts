@@ -11,5 +11,3 @@ type AbilityType = {
   positive: string
   negative: string
 }
-
-
