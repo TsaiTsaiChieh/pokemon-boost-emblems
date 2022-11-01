@@ -1,0 +1,3 @@
+interface PersistState {
+  isDarkMode: boolean
+}
