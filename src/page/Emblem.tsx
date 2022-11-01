@@ -1,8 +1,12 @@
+import {Container} from '@mui/material'
+
 import EmblemList from '../components/EmblemList'
 
 const Emblem = () => {
   return (
-    <EmblemList />
+    <Container>
+      <EmblemList />
+    </Container>
   )
 }
 
