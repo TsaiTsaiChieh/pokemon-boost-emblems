@@ -15,8 +15,13 @@ export const pokemonSlice = createSlice({
         state.cards.push(payload)
       }
     },
+    nameFilter: (state, {payload}: PayloadAction<string[]>) => {
+      state.cards = state.cards.filter((ele) =>
+        payload.includes(`${ele.id} ${ele.name}`),
+      )
+    },
   },
 })
 
-export const {setCard} = pokemonSlice.actions
+export const {setCard, nameFilter} = pokemonSlice.actions
 export default pokemonSlice.reducer

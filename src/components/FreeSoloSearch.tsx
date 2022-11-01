@@ -4,7 +4,11 @@ import Stack from '@mui/material/Stack'
 import TextField from '@mui/material/TextField'
 import {useTranslation} from 'react-i18next'
 
+import {useAppDispatch} from '../store/hook'
+import {nameFilter} from '../store/reducers/pokemonSlice'
+
 const FreeSoloSearch = () => {
+  const dispatch = useAppDispatch()
   const {t} = useTranslation()
   const pokemon: PokemonType[] = t('pokemon', {returnObjects: true})
   const onChange = (event: React.SyntheticEvent<Element, Event>,
@@ -12,6 +16,7 @@ const FreeSoloSearch = () => {
     reason: string,
     details?: string) => {
     console.log(event, value, reason, details)
+    dispatch(nameFilter(value))
   }
   return (
     <div className='flex justify-center'>
