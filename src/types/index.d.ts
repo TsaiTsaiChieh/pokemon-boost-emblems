@@ -11,3 +11,4 @@ type AbilityType = {
   positive: string
   negative: string
 }
+type PokemonCardType = PokemonType & AbilityType
