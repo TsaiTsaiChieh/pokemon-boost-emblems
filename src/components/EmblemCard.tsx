@@ -1,11 +1,10 @@
 import {Level} from '../constants'
 
 interface Props {
-  ability: AbilityType
-  pokemon: PokemonType
+  card: PokemonCardType
 }
-const EmblemCard = ({ability, pokemon}: Props) => {
-  const {id, lv, positive, negative} = ability
+const EmblemCard = ({card}: Props) => {
+  const {id, lv, positive, negative, categories, name} = card
 
   return (
     <li
@@ -24,7 +23,7 @@ const EmblemCard = ({ability, pokemon}: Props) => {
         <span className='mt-3'>{positive}</span>
         <span className='mb-3'>{negative}</span>
         <div className='categories flex'>
-          {pokemon.categories.map((ele, i) => (
+          {categories.map((ele, i) => (
             <img
               key={i}
               className='w-6'
@@ -38,10 +37,10 @@ const EmblemCard = ({ability, pokemon}: Props) => {
         <img
           className='w-20'
           src={`imgs/emblems/${Level[lv]}/${parseInt(id)}.png`}
-          alt={pokemon.name}
+          alt={name}
         />
         <label className='text-sm text-light-1 tracking-wide dark:text-dark-4'>
-          {pokemon.name}
+          {name}
         </label>
       </div>
     </li>
