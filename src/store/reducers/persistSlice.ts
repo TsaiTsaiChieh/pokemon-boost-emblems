@@ -4,14 +4,18 @@ import type {PayloadAction} from '@reduxjs/toolkit'
 const initialState: PersistState = {
   isDarkMode: false,
   characters: [],
+  grades: [],
+  colors: [],
 }
 
 export const persistSlice = createSlice({
   name: 'persist',
   initialState,
   reducers: {
-    setCharacters: (state, {payload}: PayloadAction<string[]>) => {
-      state.characters = payload
+    setSearchOptions: (state, {payload}: PayloadAction<SearchOptionsType>) => {
+      state.characters = payload.characters
+      state.grades = payload.grades
+      state.colors = payload.colors
     },
     toggleDarkMode: (state) => {
       state.isDarkMode = !state.isDarkMode
@@ -19,5 +23,5 @@ export const persistSlice = createSlice({
   },
 })
 
-export const {setCharacters, toggleDarkMode} = persistSlice.actions
+export const {setSearchOptions, toggleDarkMode} = persistSlice.actions
 export default persistSlice.reducer
