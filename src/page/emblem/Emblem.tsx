@@ -3,14 +3,14 @@ import {useEffect} from 'react'
 import {Container} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
-import EmblemList from '../components/EmblemList'
-import FreeSoloSearch from '../components/FreeSoloSearch'
-import TagFilter from '../components/TagFilter'
-import abilities from '../constants/abilities.json'
-import {useAppDispatch, useAppSelector} from '../store/hook/index'
-import {setSearchOptions} from '../store/reducers/persistSlice'
-import {setCard, setPokemonList} from '../store/reducers/pokemonSlice'
-import PositiveSwitch from './emblem/PositiveSwitch'
+import EmblemList from '../../components/EmblemList'
+import FreeSoloSearch from '../../components/FreeSoloSearch'
+import TagFilter from '../../components/TagFilter'
+import abilities from '../../constants/abilities.json'
+import {useAppDispatch, useAppSelector} from '../../store/hook/index'
+import {setSearchOptions} from '../../store/reducers/persistSlice'
+import {setCard, setPokemonList} from '../../store/reducers/pokemonSlice'
+import PositiveSwitch from './PositiveSwitch'
 
 const Emblem = () => {
   const dispatch = useAppDispatch()
