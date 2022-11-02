@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Emblem from './page/Emblem'
+import Emblem from './page/emblem/Emblem'
 
 const App = () => {
   return (
