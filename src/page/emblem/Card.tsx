@@ -1,10 +1,10 @@
-import {Level} from '../constants'
-import {useAppSelector} from '../store/hook'
+import {Level} from '../../constants'
+import {useAppSelector} from '../../store/hook'
 
 interface Props {
   card: PokemonCardType
 }
-const EmblemCard = ({card}: Props) => {
+const Card = ({card}: Props) => {
   const {id, lv, positive, negative, categories, name} = card
   const {characters} = useAppSelector((state) => state.persist)
 
@@ -55,4 +55,4 @@ const EmblemCard = ({card}: Props) => {
   )
 }
 
-export default EmblemCard
+export default Card
