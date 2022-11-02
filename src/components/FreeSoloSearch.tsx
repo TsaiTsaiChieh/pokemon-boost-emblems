@@ -4,19 +4,19 @@ import Stack from '@mui/material/Stack'
 import TextField from '@mui/material/TextField'
 import {useTranslation} from 'react-i18next'
 
-import {useAppDispatch} from '../store/hook'
-import {nameFilter} from '../store/reducers/pokemonSlice'
+import {useAppDispatch, useAppSelector} from '../store/hook'
+import {setFilter} from '../store/reducers/pokemonSlice'
 
 const FreeSoloSearch = () => {
   const dispatch = useAppDispatch()
+  const {pokemonList, filter} = useAppSelector((state) => state.pokemon)
   const {t} = useTranslation()
-  const pokemon: PokemonType[] = t('pokemon', {returnObjects: true})
   const onChange = (event: React.SyntheticEvent,
     value: string[],
     reason: string,
     details?: {option: string}) => {
     console.log(value, reason, details)
-    dispatch(nameFilter(value))
+    dispatch(setFilter({...filter, ids: value}))
   }
 
   return (
@@ -26,7 +26,7 @@ const FreeSoloSearch = () => {
           onChange={onChange}
           multiple
           id='tags-filled'
-          options={pokemon.map((ele) => `${ele.id} ${ele.name}`)}
+          options={pokemonList.map((ele) => `${ele.id} ${ele.name}`)}
           freeSolo
           // render the selected value
           renderTags={(value: readonly string[], getTagProps) => (
