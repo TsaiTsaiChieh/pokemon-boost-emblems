@@ -3,13 +3,13 @@ import {useEffect} from 'react'
 import {Container} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
-import EmblemList from '../../components/EmblemList'
 import FreeSoloSearch from '../../components/FreeSoloSearch'
 import TagFilter from '../../components/TagFilter'
 import abilities from '../../constants/abilities.json'
 import {useAppDispatch, useAppSelector} from '../../store/hook/index'
 import {setSearchOptions} from '../../store/reducers/persistSlice'
 import {setCard, setPokemonList} from '../../store/reducers/pokemonSlice'
+import CardList from './CardList'
 import PositiveSwitch from './PositiveSwitch'
 
 const Emblem = () => {
@@ -38,7 +38,7 @@ const Emblem = () => {
       <FreeSoloSearch />
       <PositiveSwitch />
       {characters.map((ele, i) => <TagFilter key={i} label={ele} id={i} />)}
-      <EmblemList />
+      <CardList />
     </Container>
   )
 }
