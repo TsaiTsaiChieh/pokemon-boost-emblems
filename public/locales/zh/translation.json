@@ -1,4 +1,5 @@
 {
+  "labels": { "id_or_name": "編號或名稱" },
   "abilities": [
     {
       "id": "001",
