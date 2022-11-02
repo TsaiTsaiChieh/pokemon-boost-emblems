@@ -1,13 +1,13 @@
-import {useAppSelector} from '../store/hook'
-import EmblemCard from './EmblemCard'
+import {useAppSelector} from '../../store/hook'
+import Card from './Card'
 
-const EmblemList = () => {
+const CardList = () => {
   const {cards} = useAppSelector((state) => state.pokemon)
 
   return (
     <ul className='flex flex-wrap gap-4 justify-center'>
       {cards.map((ele, i) => (
-        <EmblemCard
+        <Card
           key={i}
           card={ele}
         />
@@ -16,4 +16,4 @@ const EmblemList = () => {
   )
 }
 
-export default EmblemList
+export default CardList
