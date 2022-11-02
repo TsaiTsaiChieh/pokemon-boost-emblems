@@ -19,3 +19,8 @@ type FilterType = {
   levels: number[]
   positive: boolean
 }
+type SearchOptionsType = {
+  characters: string[]
+  grades: string[]
+  colors: string[]
+}
