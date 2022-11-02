@@ -11,13 +11,14 @@ const FreeSoloSearch = () => {
   const dispatch = useAppDispatch()
   const {t} = useTranslation()
   const pokemon: PokemonType[] = t('pokemon', {returnObjects: true})
-  const onChange = (event: React.SyntheticEvent<Element, Event>,
+  const onChange = (event: React.SyntheticEvent,
     value: string[],
     reason: string,
-    details?: string) => {
-    console.log(event, value, reason, details)
+    details?: {option: string}) => {
+    console.log(value, reason, details)
     dispatch(nameFilter(value))
   }
+
   return (
     <div className='flex justify-center'>
       <Stack spacing={10} sx={{width: 800}}>
@@ -27,22 +28,24 @@ const FreeSoloSearch = () => {
           id='tags-filled'
           options={pokemon.map((ele) => `${ele.id} ${ele.name}`)}
           freeSolo
-          renderTags={(value: readonly string[], getTagProps) =>
+          // render the selected value
+          renderTags={(value: readonly string[], getTagProps) => (
             value.map((option: string, index: number) => (
+              // eslint-disable-next-line react/jsx-key
               <Chip
-                key={index}
                 variant='outlined'
+                size='small'
                 label={option}
                 {...getTagProps({index})}
               />
             ))
-          }
+          )}
           renderInput={(params) => (
             <TextField
               {...params}
-              variant='filled'
-              label='freeSolo'
-              placeholder='Favorites'
+              size='small'
+              variant='outlined'
+              label={t('labels.id_or_name')}
             />
           )}
         />
