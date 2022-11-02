@@ -39,9 +39,19 @@
   },
   "rules": {
     "semi": [
-      2,
+      "error",
       "never"
     ],
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "none",  
+        "requireLast": true
+      },
+      "singleline": {
+        "delimiter": "none",   
+        "requireLast": true
+      }
+    }],
     "indent": [
       "off",
       2
