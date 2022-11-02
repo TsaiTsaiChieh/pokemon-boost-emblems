@@ -1,11 +1,9 @@
-interface PersistState {
+interface PersistState extends SearchOptionsType {
   isDarkMode: boolean
-  characters: string[]
 }
 interface PokemonState {
   cards: PokemonCardType[]
-  // for keeping the original card
-  tmpCards: readonly PokemonCardType[]
+  tmpCards: readonly PokemonCardType[] // keeping the original card
   pokemonList: readonly PokemonType[]
   total: readonly number
   filter: FilterType
