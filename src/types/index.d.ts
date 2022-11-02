@@ -12,3 +12,9 @@ type AbilityType = {
   negative: string
 }
 type PokemonCardType = PokemonType & AbilityType
+type FilterType = {
+  ids: string[]
+  characters: number[]
+  categories: number[]
+  levels: number[]
+}
