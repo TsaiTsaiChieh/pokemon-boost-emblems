@@ -3,6 +3,8 @@ interface PersistState {
 }
 interface PokemonState {
   cards: PokemonCardType[]
-  tmpCards: PokemonCardType[]
+  // for keeping the original card
+  tmpCards: readonly PokemonCardType[]
+  pokemonList: readonly PokemonType[]
   num: number
 }
