@@ -1,9 +1,9 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 import {Chip} from '@mui/material'
 
-import {useAppDispatch} from '../store/hook'
-import {setCharactersFilter} from '../store/reducers/pokemonSlice'
+import {useAppDispatch, useAppSelector} from '../store/hook'
+import {setCharactersFilter, setFilter} from '../store/reducers/pokemonSlice'
 
 interface Props {
   id: number
@@ -12,12 +12,17 @@ interface Props {
 const TagFilter = ({label, id}: Props) => {
   const [active, setActive] = useState(false)
   const dispatch = useAppDispatch()
-
+  const {filter} = useAppSelector((state) => state.pokemon)
   const handleClick = () => {
     dispatch(setCharactersFilter({id, active: !active}))
     setActive(!active)
-    !active ? console.log('add') : console.log('rm')
   }
+
+  // TODO should move 2 parent element
+  useEffect(() => {
+    dispatch(setFilter({...filter}))
+  }, [filter.characters])
+
   return (
     <Chip
       className='border-none'
