@@ -8,7 +8,7 @@ import FreeSoloSearch from '../components/FreeSoloSearch'
 import TagFilter from '../components/TagFilter'
 import abilities from '../constants/abilities.json'
 import {useAppDispatch, useAppSelector} from '../store/hook/index'
-import {setCharacters} from '../store/reducers/persistSlice'
+import {setSearchOptions} from '../store/reducers/persistSlice'
 import {setCard, setPokemonList} from '../store/reducers/pokemonSlice'
 import PositiveSwitch from './emblem/PositiveSwitch'
 
@@ -18,11 +18,12 @@ const Emblem = () => {
   const {characters} = useAppSelector((state) => state.persist)
   const {tmpCards} = useAppSelector((state) => state.pokemon)
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
-  const characterList: string[] = t('characters', {returnObjects: true})
-
-  // save pokemon data
+  const searchOptions: SearchOptionsType = t('searchOptions', {
+    returnObjects: true,
+  })
+  // save pokemon data and search options
   useEffect(() => {
-    if (!characters.length) dispatch(setCharacters(characterList))
+    if (!characters.length) dispatch(setSearchOptions({...searchOptions}))
     if (!tmpCards.length) {
       abilities.map((ele: AbilityType) => {
         const pokemon: PokemonType = pokemonList[parseInt(ele.id) - 1]
