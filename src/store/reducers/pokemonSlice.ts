@@ -3,6 +3,7 @@ import type {PayloadAction} from '@reduxjs/toolkit'
 
 const initialState: PokemonState = {
   cards: [],
+  tmpCards: [],
   num: 36,
 }
 
@@ -13,12 +14,13 @@ export const pokemonSlice = createSlice({
     setCard: (state, {payload}: PayloadAction<PokemonCardType>) => {
       if (state.cards.length !== state.num) {
         state.cards.push(payload)
+        state.tmpCards.push(payload)
       }
     },
     nameFilter: (state, {payload}: PayloadAction<string[]>) => {
-      state.cards = state.cards.filter((ele) =>
+      state.cards = payload.length ? state.tmpCards.filter((ele) =>
         payload.includes(`${ele.id} ${ele.name}`),
-      )
+      ) : state.cards = state.tmpCards
     },
   },
 })
