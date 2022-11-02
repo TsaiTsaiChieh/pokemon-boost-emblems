@@ -1,16 +1,19 @@
 import {createSlice} from '@reduxjs/toolkit'
 import type {PayloadAction} from '@reduxjs/toolkit'
 
+import abilities from '../../constants/abilities.json'
+
 const initialState: PokemonState = {
   cards: [],
   tmpCards: [],
   pokemonList: [], // unique
-  total: 12, // total pokemon
+  total: abilities.length / 3, // total pokemon
   filter: {
     ids: [],
     characters: [],
     categories: [],
     levels: [],
+    positive: true,
   },
 }
 
@@ -43,17 +46,26 @@ export const pokemonSlice = createSlice({
         state.filter.characters.push(id)
       } else {
         const idx = state.filter.characters.indexOf(id)
-        if (idx > 0) state.filter.characters.splice(idx, 1)
+        if (idx > -1) state.filter.characters.splice(idx, 1)
       }
     },
     setFilter: (state, {payload}: PayloadAction<FilterType>) => {
+      const {ids, characters, positive} = payload
       state.filter = payload
-      if (state.filter.ids) {
-        state.cards = state.filter.ids.length ?
-          state.tmpCards.filter((ele) =>
-            payload.ids.includes(`${ele.id} ${ele.name}`),
-          ) :
-          state.tmpCards
+      state.cards = state.tmpCards
+      if (ids.length) {
+        state.cards = state.cards.filter((ele) =>
+          ids.includes(`${ele.id} ${ele.name}`),
+        )
+      }
+      if (characters.length) {
+        state.cards = state.cards.filter((ele) =>
+          characters.includes(
+            positive ?
+              (ele.positive[0] as number) :
+              (ele.negative[0] as number),
+          ),
+        )
       }
     },
   },
