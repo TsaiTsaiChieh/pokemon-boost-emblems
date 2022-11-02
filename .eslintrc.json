@@ -48,7 +48,7 @@
         "requireLast": true
       },
       "singleline": {
-        "delimiter": "none",   
+        "delimiter": "semi",   
         "requireLast": true
       }
     }],
