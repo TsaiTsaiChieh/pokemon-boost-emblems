@@ -37,20 +37,26 @@ export const pokemonSlice = createSlice({
         ) :
         (state.cards = state.tmpCards)
     },
-    setCharactersFilter: (
+    toggleSubFilterById: (
       state,
-      {payload}: PayloadAction<{id: number; active: boolean}>,
+      {
+        payload,
+      }: PayloadAction<{
+        id: number
+        active: boolean
+        subFilterName: keyof FilterArrayField
+      }>,
     ) => {
-      const {id, active} = payload
+      const {id, active, subFilterName} = payload
       if (active) {
-        state.filter.characters.push(id)
+        state.filter[subFilterName].push(id)
       } else {
-        const idx = state.filter.characters.indexOf(id)
-        if (idx > -1) state.filter.characters.splice(idx, 1)
+        const idx = state.filter[subFilterName].indexOf(id)
+        if (idx > -1) state.filter[subFilterName].splice(idx, 1)
       }
     },
     setFilter: (state, {payload}: PayloadAction<FilterType>) => {
-      const {ids, characters, positive} = payload
+      const {ids, characters, positive, levels, categories} = payload
       state.filter = payload
       state.cards = state.tmpCards
       if (ids.length) {
@@ -67,6 +73,16 @@ export const pokemonSlice = createSlice({
           ),
         )
       }
+      if (levels.length) {
+        state.cards = state.cards.filter((ele) => levels.includes(ele.lv - 1))
+      }
+      if (categories.length) {
+        state.cards = state.cards.filter(
+          (ele) =>
+            categories.includes(ele.categories[0]) ||
+            categories.includes(ele.categories[1]),
+        )
+      }
     },
   },
 })
@@ -75,7 +91,7 @@ export const {
   setPokemonList,
   setCard,
   nameFilter,
-  setCharactersFilter,
+  toggleSubFilterById,
   setFilter,
 } = pokemonSlice.actions
 export default pokemonSlice.reducer
