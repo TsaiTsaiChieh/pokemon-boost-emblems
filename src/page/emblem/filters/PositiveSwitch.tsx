@@ -17,7 +17,7 @@ const PositiveSwitch = () => {
   return (
     <FormControlLabel
       className='[&>span]:text-sm'
-      label={t('labels.positive')}
+      label={filter.positive ? t('labels.positive') : t('labels.negative')}
       control={<Switch size='small' onChange={onChange} />}
     />
   )
