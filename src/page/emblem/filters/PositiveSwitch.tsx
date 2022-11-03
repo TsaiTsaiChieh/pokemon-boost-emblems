@@ -3,8 +3,8 @@ import {ChangeEvent} from 'react'
 import {FormControlLabel, Switch} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
-import {useAppDispatch, useAppSelector} from '../../store/hook/index'
-import {setFilter} from '../../store/reducers/pokemonSlice'
+import {useAppDispatch, useAppSelector} from '../../../store/hook/index'
+import {setFilter} from '../../../store/reducers/pokemonSlice'
 
 const PositiveSwitch = () => {
   const dispatch = useAppDispatch()
