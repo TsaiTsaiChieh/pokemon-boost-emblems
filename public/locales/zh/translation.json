@@ -22,62 +22,62 @@
     {
       "id": "001",
       "name": "妙蛙種子",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "002",
       "name": "妙蛙草",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "003",
       "name": "妙蛙花",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "004",
       "name": "小火龍",
-      "categories": [3]
+      "categories": [2]
     },
     {
       "id": "005",
       "name": "火恐龍",
-      "categories": [3]
+      "categories": [2]
     },
     {
       "id": "006",
       "name": "噴火龍",
-      "categories": [3]
+      "categories": [2]
     },
     {
       "id": "007",
       "name": "傑尼龜",
-      "categories": [4]
+      "categories": [3]
     },
     {
       "id": "008",
       "name": "卡咪龜",
-      "categories": [4]
+      "categories": [3]
     },
     {
       "id": "009",
       "name": "水箭龜",
-      "categories": [4]
+      "categories": [3]
     },
     {
       "id": "010",
       "name": "綠毛蟲",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "011",
       "name": "鐵甲蛹",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "012",
       "name": "巴大蝶",
-      "categories": [1, 5]
+      "categories": [0, 4]
     }
   ]
 }
