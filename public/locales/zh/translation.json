@@ -1,6 +1,6 @@
 {
   "labels": { "id_or_name": "編號或名稱", "positive": "正向效果" },
-  "searchOptions": {
+  "search_options": {
     "characters": [
       "體力",
       "攻擊",

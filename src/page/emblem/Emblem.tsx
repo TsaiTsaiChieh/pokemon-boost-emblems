@@ -18,7 +18,7 @@ const Emblem = () => {
   const {characters} = useAppSelector((state) => state.persist)
   const {tmpCards} = useAppSelector((state) => state.pokemon)
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
-  const searchOptions: SearchOptionsType = t('searchOptions', {
+  const searchOptions: SearchOptionsType = t('search_options', {
     returnObjects: true,
   })
   // save pokemon data and search options
