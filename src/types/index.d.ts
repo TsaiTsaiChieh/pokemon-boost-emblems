@@ -12,11 +12,13 @@ type AbilityType = {
   negative: (number | string)[]
 }
 type PokemonCardType = PokemonType & AbilityType
-type FilterType = {
+type FilterArrayField = {
+  characters: number[] // ability
+  categories: number[] // color
+  levels: number[] // grade
+}
+type FilterType = FilterArrayField & {
   ids: string[]
-  characters: number[]
-  categories: number[]
-  levels: number[]
   positive: boolean
 }
 type SearchOptionsType = {
