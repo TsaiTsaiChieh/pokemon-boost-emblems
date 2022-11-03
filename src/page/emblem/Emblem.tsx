@@ -4,13 +4,12 @@ import {Container} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
 import FreeSoloSearch from '../../components/FreeSoloSearch'
-import TagFilter from '../../components/TagFilter'
 import abilities from '../../constants/abilities.json'
 import {useAppDispatch, useAppSelector} from '../../store/hook/index'
 import {setSearchOptions} from '../../store/reducers/persistSlice'
 import {setCard, setPokemonList} from '../../store/reducers/pokemonSlice'
 import CardList from './CardList'
-import PositiveSwitch from './PositiveSwitch'
+import CharacterFilters from './filters/CharacterFilters'
 
 const Emblem = () => {
   const dispatch = useAppDispatch()
@@ -36,8 +35,7 @@ const Emblem = () => {
   return (
     <Container>
       <FreeSoloSearch />
-      <PositiveSwitch />
-      {characters.map((ele, i) => <TagFilter key={i} label={ele} id={i} />)}
+      <CharacterFilters />
       <CardList />
     </Container>
   )
