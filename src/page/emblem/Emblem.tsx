@@ -3,13 +3,16 @@ import {useEffect} from 'react'
 import {Container} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
+
 import FreeSoloSearch from '../../components/FreeSoloSearch'
 import abilities from '../../constants/abilities.json'
 import {useAppDispatch, useAppSelector} from '../../store/hook/index'
 import {setSearchOptions} from '../../store/reducers/persistSlice'
 import {setCard, setPokemonList} from '../../store/reducers/pokemonSlice'
 import CardList from './CardList'
-import CharacterFilters from './filters/CharacterFilters'
+import CharacterFilterGroup from './filters/CharacterFilterGroup'
+import ColorFilterGroup from './filters/ColorFilterGroup'
+import GradeFilterGroup from './filters/GradeFilterGroup'
 
 const Emblem = () => {
   const dispatch = useAppDispatch()
@@ -35,7 +38,9 @@ const Emblem = () => {
   return (
     <Container>
       <FreeSoloSearch />
-      <CharacterFilters />
+      <GradeFilterGroup />
+      <ColorFilterGroup />
+      <CharacterFilterGroup />
       <CardList />
     </Container>
   )
