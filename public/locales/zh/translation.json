@@ -1,5 +1,9 @@
 {
-  "labels": { "id_or_name": "編號或名稱", "positive": "正向效果" },
+  "labels": {
+    "id_or_name": "編號或名稱",
+    "positive": "正面效果",
+    "negative": "負面效果"
+  },
   "search_options": {
     "characters": [
       "體力",
