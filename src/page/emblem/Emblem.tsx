@@ -35,7 +35,7 @@ const Emblem = () => {
       <GradeFilterGroup />
       <ColorFilterGroup />
       <CharacterFilterGroup />
-      {cards.length && <CardList />}
+      {cards.length ? <CardList /> : null}
     </Container>
   )
 }
