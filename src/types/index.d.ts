@@ -21,8 +21,3 @@ type FilterType = FilterArrayField & {
   ids: string[]
   positive: boolean
 }
-type SearchOptionsType = {
-  characters: string[]
-  grades: string[]
-  colors: string[]
-}

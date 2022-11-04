@@ -1,5 +1,6 @@
-interface PersistState extends SearchOptionsType {
+interface PersistState {
   isDarkMode: boolean
+  language: string
 }
 interface PokemonState {
   cards: PokemonCardType[]

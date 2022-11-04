@@ -1,5 +1,7 @@
 import {useEffect} from 'react'
 
+import {useTranslation} from 'react-i18next'
+
 import TagFilter from '../../../components/TagFilter'
 import {useAppDispatch, useAppSelector} from '../../../store/hook'
 import {setFilter} from '../../../store/reducers/pokemonSlice'
@@ -8,7 +10,10 @@ import PositiveSwitch from './PositiveSwitch'
 const CharacterFilterGroup = () => {
   const dispatch = useAppDispatch()
   const {filter} = useAppSelector((state) => state.pokemon)
-  const {characters} = useAppSelector((state) => state.persist)
+  const {t} = useTranslation()
+  const characterOptions: string[] = t('search_options.characters', {
+    returnObjects: true,
+  })
 
   // change characters will trigger search action
   useEffect(() => {
@@ -18,7 +23,7 @@ const CharacterFilterGroup = () => {
   return (
     <div className=''>
       <PositiveSwitch />
-      {characters.map((ele, i) => (
+      {characterOptions.map((ele, i) => (
         <TagFilter key={i} label={ele} id={i} subFilterName='characters' />
       ))}
     </div>

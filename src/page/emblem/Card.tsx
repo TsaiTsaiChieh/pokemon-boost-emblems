@@ -1,12 +1,15 @@
-import {Level} from '../../constants'
-import {useAppSelector} from '../../store/hook'
+import {useTranslation} from 'react-i18next'
 
+import {Level} from '../../constants'
 interface Props {
   card: PokemonCardType
 }
 const Card = ({card}: Props) => {
   const {id, lv, positive, negative, categories, name} = card
-  const {characters} = useAppSelector((state) => state.persist)
+  const {t} = useTranslation()
+  const characters: AbilityType[] = t('search_options.characters', {
+    returnObjects: true,
+  })
 
   return (
     <li
