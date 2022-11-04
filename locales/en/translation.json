@@ -1,75 +1,94 @@
 {
-  "abilities": [
-    {
-      "id": "001",
-      "lv": 1,
-      "positive": "Sp. ATK +1.5",
-      "negative": "HP -30"
-    },
-    {
-      "id": "001",
-      "lv": 2,
-      "positive": "Sp. ATK +2.5",
-      "negative": "HP -40"
-    },
-    {
-      "id": "001",
-      "lv": 3,
-      "positive": "Sp. ATK +3",
-      "negative": "HP -50"
-    },
-    {
-      "id": "002",
-      "lv": 1,
-      "positive": "Sp. ATK +1.5",
-      "negative": "DEF -3"
-    },
-    {
-      "id": "002",
-      "lv": 2,
-      "positive": "Sp. ATK +2.5",
-      "negative": "DEF -4"
-    },
-    {
-      "id": "002",
-      "lv": 3,
-      "positive": "Sp. ATK +3",
-      "negative": "DEF -5"
-    },
-    {
-      "id": "003",
-      "lv": 1,
-      "positive": "Sp. ATK +1.5",
-      "negative": "ATK -1"
-    },
-    {
-      "id": "003",
-      "lv": 2,
-      "positive": "Sp. ATK +2.5",
-      "negative": "ATK -1.5"
-    },
-    {
-      "id": "003",
-      "lv": 3,
-      "positive": "Sp. ATK +3",
-      "negative": "ATK -2"
-    }
-  ],
+  "labels": {
+    "id_or_name": "ID or Name",
+    "positive": "positive",
+    "negative": "negative"
+  },
+  "search_options": {
+    "characters": [
+      "HP",
+      "Atk",
+      "Def",
+      "Sp. Atk",
+      "Sp. Def",
+      "Speed",
+      "Crit Rate",
+      "CDR"
+    ],
+    "grades": ["Bronze", "Sliver", "Gold"],
+    "colors": [
+      "Green",
+      "Yellow",
+      "Red",
+      "Blue",
+      "White",
+      "Black",
+      "Brown",
+      "Purple",
+      "Pink",
+      "Navy"
+    ]
+  },
   "pokemon": [
     {
       "id": "001",
       "name": "Bulbasaur",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "002",
       "name": "Ivysaur",
-      "categories": [1]
+      "categories": [0]
     },
     {
       "id": "003",
       "name": "Venusaur",
-      "categories": [1]
+      "categories": [0]
+    },
+    {
+      "id": "004",
+      "name": "Charmander",
+      "categories": [2]
+    },
+    {
+      "id": "005",
+      "name": "Charmeleon",
+      "categories": [2]
+    },
+    {
+      "id": "006",
+      "name": "Charizard",
+      "categories": [2]
+    },
+    {
+      "id": "007",
+      "name": "Squirtle",
+      "categories": [3]
+    },
+    {
+      "id": "008",
+      "name": "Wartortle",
+      "categories": [3]
+    },
+    {
+      "id": "009",
+      "name": "Blastoise",
+      "categories": [3]
+    },
+    {
+      "id": "010",
+      "name": "Caterpie",
+      "categories": [0]
+    },
+    {
+      "id": "011",
+      "name": "Metapod",
+      "categories": [0]
+    },
+    {
+      "id": "012",
+      "name": "Butterfree",
+      "categories": [0, 4]
     }
   ]
 }
