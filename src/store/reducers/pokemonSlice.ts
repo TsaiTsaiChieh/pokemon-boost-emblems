@@ -60,9 +60,7 @@ export const pokemonSlice = createSlice({
       state.filter = payload
       state.cards = state.tmpCards
       if (ids.length) {
-        state.cards = state.cards.filter((ele) =>
-          ids.includes(`${ele.id} ${ele.name}`),
-        )
+        state.cards = state.cards.filter((ele) => ids.includes(ele.id))
       }
       if (characters.length) {
         state.cards = state.cards.filter((ele) =>
