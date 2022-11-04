@@ -8,9 +8,8 @@ import abilities from '../../constants/abilities.json'
 import {useAppDispatch, useAppSelector} from '../../store/hook/index'
 import {setCard, setPokemonList} from '../../store/reducers/pokemonSlice'
 import CardList from './CardList'
-import CharacterFilterGroup from './filters/CharacterFilterGroup'
-import ColorFilterGroup from './filters/ColorFilterGroup'
-import GradeFilterGroup from './filters/GradeFilterGroup'
+import FilterGroups from './filters/FilterGroups'
+
 
 const Emblem = () => {
   const dispatch = useAppDispatch()
@@ -32,9 +31,7 @@ const Emblem = () => {
   return (
     <Container>
       <FreeSoloSearch />
-      <GradeFilterGroup />
-      <ColorFilterGroup />
-      <CharacterFilterGroup />
+      <FilterGroups />
       {cards.length ? <CardList /> : null}
     </Container>
   )
