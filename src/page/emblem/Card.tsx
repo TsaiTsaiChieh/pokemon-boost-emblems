@@ -5,11 +5,12 @@ interface Props {
   card: PokemonCardType
 }
 const Card = ({card}: Props) => {
-  const {id, lv, positive, negative, categories, name} = card
+  const {id, lv, positive, negative, categories} = card
   const {t} = useTranslation()
   const characters: AbilityType[] = t('search_options.characters', {
     returnObjects: true,
   })
+  const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
 
   return (
     <li
@@ -48,10 +49,10 @@ const Card = ({card}: Props) => {
         <img
           className='w-20'
           src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.png`}
-          alt={name}
+          alt={pokemonList[parseInt(id) - 1].name}
         />
         <label className='text-sm text-light-1 tracking-wide dark:text-dark-4'>
-          {name}
+          {pokemonList[parseInt(id) - 1].name}
         </label>
       </div>
     </li>

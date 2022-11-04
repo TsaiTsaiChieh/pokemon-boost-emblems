@@ -9,14 +9,13 @@ import {setFilter} from '../store/reducers/pokemonSlice'
 
 const FreeSoloSearch = () => {
   const dispatch = useAppDispatch()
-  const {pokemonList, filter} = useAppSelector((state) => state.pokemon)
+  const {filter} = useAppSelector((state) => state.pokemon)
   const {t} = useTranslation()
-  const onChange = (event: React.SyntheticEvent,
-    value: string[],
-    reason: string,
-    details?: {option: string}) => {
-    console.log(value, reason, details)
-    dispatch(setFilter({...filter, ids: value}))
+  const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
+  const onChange = (_: React.SyntheticEvent,
+    value: string[]) => {
+    const ids = value.map((ele) => ele.substring(0, 3))
+    dispatch(setFilter({...filter, ids}))
   }
 
   return (
