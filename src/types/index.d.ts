@@ -1,5 +1,6 @@
 type LevelType = 1 | 2 | 3
 type GradeType = 'bronze' | 'sliver' | 'gold'
+type FilterArrayFieldType = 'characters' | 'categories' | 'levels'
 type PokemonType = {
   id: string
   name: string
