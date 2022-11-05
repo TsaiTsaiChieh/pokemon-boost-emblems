@@ -23,7 +23,6 @@ const Emblem = () => {
       abilities.map((ele: AbilityType) => {
         const pokemon: PokemonType = pokemonList[parseInt(ele.id) - 1]
         dispatch(setCard({...ele, ...pokemon}))
-        // dispatch(setPokemonList(pokemonList))
       })
     }
   }, [tmpCards, language])
