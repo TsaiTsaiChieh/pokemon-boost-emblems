@@ -1,5 +1,6 @@
 import {useEffect} from 'react'
 
+import {Avatar} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
 import TagFilter from '../../../components/TagFilter'
@@ -8,7 +9,7 @@ import {setFilter} from '../../../store/reducers/pokemonSlice'
 
 const ColorFilterGroup = () => {
   const dispatch = useAppDispatch()
-  const {filter} = useAppSelector(((state) => state.pokemon))
+  const {filter, stat} = useAppSelector(((state) => state.pokemon))
   const {t} = useTranslation()
   const colorOptions: string[] = t('search_options.colors', {
     returnObjects: true,
@@ -19,9 +20,15 @@ const ColorFilterGroup = () => {
   }, [filter.categories])
 
   return (
-    <div className=''>
+    <div className='flex flex-wrap gap-2'>
       {colorOptions.map((ele, i) => (
-        <TagFilter key={i} id={i} label={ele} subFilterName='categories' />
+        <TagFilter
+          key={i}
+          id={i}
+          label={ele}
+          subFilterName='categories'
+          total={stat.categories[i]}
+        />
       ))}
     </div>
   )

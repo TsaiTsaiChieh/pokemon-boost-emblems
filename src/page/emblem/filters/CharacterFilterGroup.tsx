@@ -9,7 +9,7 @@ import PositiveSwitch from './PositiveSwitch'
 
 const CharacterFilterGroup = () => {
   const dispatch = useAppDispatch()
-  const {filter} = useAppSelector((state) => state.pokemon)
+  const {filter, stat} = useAppSelector((state) => state.pokemon)
   const {t} = useTranslation()
   const characterOptions: string[] = t('search_options.characters', {
     returnObjects: true,
@@ -21,10 +21,12 @@ const CharacterFilterGroup = () => {
   }, [filter.characters])
 
   return (
-    <div className=''>
+    <div className='flex flex-wrap gap-2'>
       <PositiveSwitch />
       {characterOptions.map((ele, i) => (
-        <TagFilter key={i} label={ele} id={i} subFilterName='characters' />
+        <TagFilter key={i} label={ele} id={i} subFilterName='characters'
+          total={stat.characters[i]}
+        />
       ))}
     </div>
   )
