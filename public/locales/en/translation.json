@@ -1,8 +1,9 @@
 {
   "labels": {
     "id_or_name": "ID or Name",
-    "positive": "positive",
-    "negative": "negative"
+    "positive": "Positive",
+    "negative": "Negative",
+    "all": "All"
   },
   "search_options": {
     "characters": [
