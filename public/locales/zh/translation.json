@@ -2,7 +2,8 @@
   "labels": {
     "id_or_name": "編號或名稱",
     "positive": "正面效果",
-    "negative": "負面效果"
+    "negative": "負面效果",
+    "all": "全部"
   },
   "search_options": {
     "characters": [
@@ -12,7 +13,7 @@
       "特攻",
       "特防",
       "移動速度",
-      "擊中要害率",
+      "爆擊率",
       "等待時間"
     ],
     "grades": ["銅", "銀", "金"],
