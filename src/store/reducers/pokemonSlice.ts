@@ -3,10 +3,11 @@ import type {PayloadAction} from '@reduxjs/toolkit'
 
 import abilities from '../../constants/abilities.json'
 
+const total = abilities.length / 3
 const initialState: PokemonState = {
   cards: [],
   tmpCards: [],
-  total: abilities.length / 3, // total pokemon
+  total, // total pokemon
   filter: {
     ids: [],
     characters: [],
@@ -14,6 +15,12 @@ const initialState: PokemonState = {
     levels: [],
     positive: true,
   },
+  stat: {
+    characters: new Array(8).fill(0),
+    categories: new Array(9).fill(0),
+    levels: [total, total, total],
+  },
+  reset: false,
 }
 
 export const pokemonSlice = createSlice({
@@ -51,6 +58,14 @@ export const pokemonSlice = createSlice({
         if (idx > -1) state.filter[subFilterName].splice(idx, 1)
       }
     },
+    setReset: (state, {payload}: PayloadAction<boolean>) => {
+      console.log(payload, '--')
+      state.reset = payload
+    },
+    resetFilter: (state) => {
+      state.cards = state.tmpCards
+      state.filter = initialState.filter
+    },
     setFilter: (state, {payload}: PayloadAction<FilterType>) => {
       const {ids, characters, positive, levels, categories} = payload
       state.filter = payload
@@ -77,6 +92,21 @@ export const pokemonSlice = createSlice({
             categories.includes(ele.categories[1]),
         )
       }
+      Array.from({length: 3}).map((_, i) => {
+        state.stat.levels[i] = state.cards.filter(
+          (ele) => ele.lv === i + 1,
+        ).length
+      })
+      Array.from({length: 8}).map((_, i) => {
+        state.stat.characters[i] = state.cards.filter((ele) =>
+          state.filter.positive ? ele.positive[0] === i : ele.negative[0] === i,
+        ).length
+      })
+      Array.from({length: 10}).map((_, i) => {
+        state.stat.categories[i] = state.cards.filter((ele) =>
+          ele.categories.includes(i),
+        ).length
+      })
     },
   },
 })
@@ -85,6 +115,8 @@ export const {
   setCard,
   nameFilter,
   toggleSubFilterById,
+  setReset,
+  resetFilter,
   setFilter,
 } = pokemonSlice.actions
 export default pokemonSlice.reducer
