@@ -6,7 +6,6 @@ import abilities from '../../constants/abilities.json'
 const initialState: PokemonState = {
   cards: [],
   tmpCards: [],
-  pokemonList: [], // unique
   total: abilities.length / 3, // total pokemon
   filter: {
     ids: [],
@@ -21,9 +20,6 @@ export const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState,
   reducers: {
-    setPokemonList: (state, {payload}: PayloadAction<PokemonType[]>) => {
-      state.pokemonList = payload
-    },
     setCard: (state, {payload}: PayloadAction<PokemonCardType>) => {
       if (state.cards.length !== state.total * 3) {
         state.cards.push(payload)
@@ -86,7 +82,6 @@ export const pokemonSlice = createSlice({
 })
 
 export const {
-  setPokemonList,
   setCard,
   nameFilter,
   toggleSubFilterById,

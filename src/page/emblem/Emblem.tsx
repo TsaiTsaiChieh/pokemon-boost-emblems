@@ -6,7 +6,7 @@ import {useTranslation} from 'react-i18next'
 import FreeSoloSearch from '../../components/FreeSoloSearch'
 import abilities from '../../constants/abilities.json'
 import {useAppDispatch, useAppSelector} from '../../store/hook/index'
-import {setCard, setPokemonList} from '../../store/reducers/pokemonSlice'
+import {setCard} from '../../store/reducers/pokemonSlice'
 import CardList from './CardList'
 import FilterGroups from './filters/FilterGroups'
 
@@ -23,7 +23,7 @@ const Emblem = () => {
       abilities.map((ele: AbilityType) => {
         const pokemon: PokemonType = pokemonList[parseInt(ele.id) - 1]
         dispatch(setCard({...ele, ...pokemon}))
-        dispatch(setPokemonList(pokemonList))
+        // dispatch(setPokemonList(pokemonList))
       })
     }
   }, [tmpCards, language])
