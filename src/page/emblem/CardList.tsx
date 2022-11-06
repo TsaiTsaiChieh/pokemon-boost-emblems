@@ -6,7 +6,7 @@ const CardList = () => {
 
   return (
     <ul className='flex flex-wrap justify-center gap-4 pb-8
-    custom-463:justify-between'>
+    custom-463:justify-between custom-1153:justify-start'>
       {cards.map((ele, i) => (
         <Card key={i} card={ele} />
       ))}
