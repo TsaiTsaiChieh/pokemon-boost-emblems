@@ -1,8 +1,9 @@
 {
+  "titles": {
+    "main": "Boost Emblems"
+  },
   "labels": {
     "id_or_name": "ID or Name",
-    "positive": "Positive",
-    "negative": "Negative",
     "all": "All"
   },
   "search_options": {
@@ -90,6 +91,701 @@
       "id": "012",
       "name": "Butterfree",
       "categories": [0, 4]
+    },
+    {
+      "id": "013",
+      "name": "Weedle",
+      "categories": [0]
+    },
+    {
+      "id": "014",
+      "name": "Kakuna",
+      "categories": [0]
+    },
+    {
+      "id": "015",
+      "name": "Beedrill",
+      "categories": [0, 5]
+    },
+    {
+      "id": "016",
+      "name": "Pidgey",
+      "categories": [4]
+    },
+    {
+      "id": "017",
+      "name": "Pidgeotto",
+      "categories": [4]
+    },
+    {
+      "id": "018",
+      "name": "Pidgeot",
+      "categories": [4]
+    },
+    {
+      "id": "019",
+      "name": "Rattata",
+      "categories": [4]
+    },
+    {
+      "id": "020",
+      "name": "Raticate",
+      "categories": [4]
+    },
+    {
+      "id": "021",
+      "name": "Spearow",
+      "categories": [4]
+    },
+    {
+      "id": "022",
+      "name": "Fearow",
+      "categories": [4]
+    },
+    {
+      "id": "023",
+      "name": "Ekans",
+      "categories": [5]
+    },
+    {
+      "id": "024",
+      "name": "Arbok",
+      "categories": [5]
+    },
+    {
+      "id": "025",
+      "name": "Pikachu",
+      "categories": [1]
+    },
+    {
+      "id": "026",
+      "name": "Raichu",
+      "categories": [1]
+    },
+    {
+      "id": "027",
+      "name": "Sandshrew",
+      "categories": [6]
+    },
+    {
+      "id": "028",
+      "name": "Sandslash",
+      "categories": [6]
+    },
+    {
+      "id": "029",
+      "name": "Nidoran♀",
+      "categories": [7]
+    },
+    {
+      "id": "030",
+      "name": "Nidorina",
+      "categories": [7]
+    },
+    {
+      "id": "031",
+      "name": "Nidoqueen",
+      "categories": [7, 6]
+    },
+    {
+      "id": "032",
+      "name": "Nidoran♂",
+      "categories": [7]
+    },
+    {
+      "id": "033",
+      "name": "Nidorino",
+      "categories": [7]
+    },
+    {
+      "id": "034",
+      "name": "Nidoking",
+      "categories": [7, 6]
+    },
+    {
+      "id": "035",
+      "name": "Clefairy",
+      "categories": [8]
+    },
+    {
+      "id": "036",
+      "name": "Clefable",
+      "categories": [8]
+    },
+    {
+      "id": "037",
+      "name": "Vulpix",
+      "categories": [2]
+    },
+    {
+      "id": "038",
+      "name": "Ninetales",
+      "categories": [2]
+    },
+    {
+      "id": "039",
+      "name": "Jigglypuff",
+      "categories": [8]
+    },
+    {
+      "id": "040",
+      "name": "Wigglytuff",
+      "categories": [8]
+    },
+    {
+      "id": "041",
+      "name": "Zubat",
+      "categories": [5]
+    },
+    {
+      "id": "042",
+      "name": "Golbat",
+      "categories": [5]
+    },
+    {
+      "id": "043",
+      "name": "Oddish",
+      "categories": [0]
+    },
+    {
+      "id": "044",
+      "name": "Gloom",
+      "categories": [0]
+    },
+    {
+      "id": "045",
+      "name": "Vileplume",
+      "categories": [0, 5]
+    },
+    {
+      "id": "046",
+      "name": "Paras",
+      "categories": [0]
+    },
+    {
+      "id": "047",
+      "name": "Parasect",
+      "categories": [0]
+    },
+    {
+      "id": "048",
+      "name": "Venonat",
+      "categories": [0]
+    },
+    {
+      "id": "049",
+      "name": "Venomoth",
+      "categories": [0, 5]
+    },
+    {
+      "id": "050",
+      "name": "Diglett",
+      "categories": [6]
+    },
+    {
+      "id": "051",
+      "name": "Dugtrio",
+      "categories": [6]
+    },
+    {
+      "id": "052",
+      "name": "Meowth",
+      "categories": [4]
+    },
+    {
+      "id": "053",
+      "name": "Persian",
+      "categories": [4]
+    },
+    {
+      "id": "054",
+      "name": "Psyduck",
+      "categories": [3]
+    },
+    {
+      "id": "055",
+      "name": "Golduck",
+      "categories": [3]
+    },
+    {
+      "id": "056",
+      "name": "Mankey",
+      "categories": [6]
+    },
+    {
+      "id": "057",
+      "name": "Primeape",
+      "categories": [6]
+    },
+    {
+      "id": "058",
+      "name": "Growlithe",
+      "categories": [2]
+    },
+    {
+      "id": "059",
+      "name": "Arcanine",
+      "categories": [2]
+    },
+    {
+      "id": "060",
+      "name": "Poliwag",
+      "categories": [3]
+    },
+    {
+      "id": "061",
+      "name": "Poliwhirl",
+      "categories": [3]
+    },
+    {
+      "id": "062",
+      "name": "Poliwrath",
+      "categories": [3, 6]
+    },
+    {
+      "id": "063",
+      "name": "Abra",
+      "categories": [7]
+    },
+    {
+      "id": "064",
+      "name": "Kadabra",
+      "categories": [7]
+    },
+    {
+      "id": "065",
+      "name": "Alakazam",
+      "categories": [7]
+    },
+    {
+      "id": "066",
+      "name": "Machop",
+      "categories": [6]
+    },
+    {
+      "id": "067",
+      "name": "Machoke",
+      "categories": [6]
+    },
+    {
+      "id": "068",
+      "name": "Machamp",
+      "categories": [6]
+    },
+    {
+      "id": "069",
+      "name": "Bellsprout",
+      "categories": [0]
+    },
+    {
+      "id": "070",
+      "name": "Weepinbell",
+      "categories": [0]
+    },
+    {
+      "id": "071",
+      "name": "Victreebel",
+      "categories": [0, 5]
+    },
+    {
+      "id": "072",
+      "name": "Tentacool",
+      "categories": [3]
+    },
+    {
+      "id": "073",
+      "name": "Tentacruel",
+      "categories": [3, 5]
+    },
+    {
+      "id": "074",
+      "name": "Geodude",
+      "categories": [6]
+    },
+    {
+      "id": "075",
+      "name": "Graveler",
+      "categories": [6]
+    },
+    {
+      "id": "076",
+      "name": "Golem",
+      "categories": [6]
+    },
+    {
+      "id": "077",
+      "name": "Ponyta",
+      "categories": [2]
+    },
+    {
+      "id": "078",
+      "name": "Rapidash",
+      "categories": [2]
+    },
+    {
+      "id": "079",
+      "name": "Slowpoke",
+      "categories": [3]
+    },
+    {
+      "id": "080",
+      "name": "Slowbro",
+      "categories": [3, 7]
+    },
+    {
+      "id": "081",
+      "name": "Magnemite",
+      "categories": [1]
+    },
+    {
+      "id": "082",
+      "name": "Magneton",
+      "categories": [1]
+    },
+    {
+      "id": "083",
+      "name": "Farfetch'd",
+      "categories": [4]
+    },
+    {
+      "id": "084",
+      "name": "Doduo",
+      "categories": [4]
+    },
+    {
+      "id": "085",
+      "name": "Dodrio",
+      "categories": [4]
+    },
+    {
+      "id": "086",
+      "name": "Seel",
+      "categories": [3]
+    },
+    {
+      "id": "087",
+      "name": "Dewgong",
+      "categories": [3]
+    },
+    {
+      "id": "088",
+      "name": "Grimer",
+      "categories": [5]
+    },
+    {
+      "id": "089",
+      "name": "Muk",
+      "categories": [5]
+    },
+    {
+      "id": "090",
+      "name": "Shellder",
+      "categories": [3]
+    },
+    {
+      "id": "091",
+      "name": "Cloyster",
+      "categories": [3]
+    },
+    {
+      "id": "092",
+      "name": "Gastly",
+      "categories": [7]
+    },
+    {
+      "id": "093",
+      "name": "Haunter",
+      "categories": [7]
+    },
+    {
+      "id": "094",
+      "name": "Gengar",
+      "categories": [7, 3]
+    },
+    {
+      "id": "095",
+      "name": "Onix",
+      "categories": [6]
+    },
+    {
+      "id": "096",
+      "name": "Drowzee",
+      "categories": [7]
+    },
+    {
+      "id": "097",
+      "name": "Hypno",
+      "categories": [7]
+    },
+    {
+      "id": "098",
+      "name": "Krabby",
+      "categories": [3]
+    },
+    {
+      "id": "099",
+      "name": "Kingler",
+      "categories": [3]
+    },
+    {
+      "id": "100",
+      "name": "Voltorb",
+      "categories": [1]
+    },
+    {
+      "id": "101",
+      "name": "Electrode",
+      "categories": [1]
+    },
+    {
+      "id": "102",
+      "name": "Exeggcute",
+      "categories": [0]
+    },
+    {
+      "id": "103",
+      "name": "Exeggutor",
+      "categories": [0, 7]
+    },
+    {
+      "id": "104",
+      "name": "Cubone",
+      "categories": [6]
+    },
+    {
+      "id": "105",
+      "name": "Marowak",
+      "categories": [6]
+    },
+    {
+      "id": "106",
+      "name": "Hitmonlee",
+      "categories": [6]
+    },
+    {
+      "id": "107",
+      "name": "Hitmonchan",
+      "categories": [6]
+    },
+    {
+      "id": "108",
+      "name": "Lickitung",
+      "categories": [4]
+    },
+    {
+      "id": "109",
+      "name": "Koffing",
+      "categories": [7]
+    },
+    {
+      "id": "110",
+      "name": "Weezing",
+      "categories": [7]
+    },
+    {
+      "id": "111",
+      "name": "Rhyhorn",
+      "categories": [6]
+    },
+    {
+      "id": "112",
+      "name": "Rhydon",
+      "categories": [6]
+    },
+    {
+      "id": "113",
+      "name": "Chansey",
+      "categories": [4]
+    },
+    {
+      "id": "114",
+      "name": "Tangela",
+      "categories": [0]
+    },
+    {
+      "id": "115",
+      "name": "Kangaskhan",
+      "categories": [4]
+    },
+    {
+      "id": "116",
+      "name": "Horsea",
+      "categories": [3]
+    },
+    {
+      "id": "117",
+      "name": "Seadra",
+      "categories": [3]
+    },
+    {
+      "id": "118",
+      "name": "Goldeen",
+      "categories": [3]
+    },
+    {
+      "id": "119",
+      "name": "Seaking",
+      "categories": [3]
+    },
+    {
+      "id": "120",
+      "name": "Staryu",
+      "categories": [3]
+    },
+    {
+      "id": "121",
+      "name": "Starmie",
+      "categories": [3, 7]
+    },
+    {
+      "id": "122",
+      "name": "Mr. Mime",
+      "categories": [7, 8]
+    },
+    {
+      "id": "123",
+      "name": "Scyther",
+      "categories": [0, 4]
+    },
+    {
+      "id": "124",
+      "name": "Jynx",
+      "categories": [3, 7]
+    },
+    {
+      "id": "125",
+      "name": "Electabuzz",
+      "categories": [1]
+    },
+    {
+      "id": "126",
+      "name": "Magmar",
+      "categories": [2]
+    },
+    {
+      "id": "127",
+      "name": "Pinsir",
+      "categories": [0]
+    },
+    {
+      "id": "128",
+      "name": "Tauros",
+      "categories": [4]
+    },
+    {
+      "id": "129",
+      "name": "Magikarp",
+      "categories": [3]
+    },
+    {
+      "id": "130",
+      "name": "Gyarados",
+      "categories": [3, 4]
+    },
+    {
+      "id": "131",
+      "name": "Lapras",
+      "categories": [3]
+    },
+    {
+      "id": "132",
+      "name": "Ditto",
+      "categories": [4]
+    },
+    {
+      "id": "133",
+      "name": "Eevee",
+      "categories": [4]
+    },
+    {
+      "id": "134",
+      "name": "Vaporeon",
+      "categories": [3]
+    },
+    {
+      "id": "135",
+      "name": "Jolteon",
+      "categories": [1]
+    },
+    {
+      "id": "136",
+      "name": "Flareon",
+      "categories": [2]
+    },
+    {
+      "id": "137",
+      "name": "Porygon",
+      "categories": [4]
+    },
+    {
+      "id": "138",
+      "name": "Omanyte",
+      "categories": [6]
+    },
+    {
+      "id": "139",
+      "name": "Omastar",
+      "categories": [6, 3]
+    },
+    {
+      "id": "140",
+      "name": "Kabuto",
+      "categories": [6]
+    },
+    {
+      "id": "141",
+      "name": "Kabutops",
+      "categories": [6, 3]
+    },
+    {
+      "id": "142",
+      "name": "Aerodactyl",
+      "categories": [6, 4]
+    },
+    {
+      "id": "143",
+      "name": "Snorlax",
+      "categories": [4]
+    },
+    {
+      "id": "144",
+      "name": "Articuno",
+      "categories": [3, 4]
+    },
+    {
+      "id": "145",
+      "name": "Zapdos",
+      "categories": [1, 4]
+    },
+    {
+      "id": "146",
+      "name": "Moltres",
+      "categories": [2, 4]
+    },
+    {
+      "id": "147",
+      "name": "Dratini",
+      "categories": [9]
+    },
+    {
+      "id": "148",
+      "name": "Dragonair",
+      "categories": [9]
+    },
+    {
+      "id": "149",
+      "name": "Dragonite",
+      "categories": [9, 4]
+    },
+    {
+      "id": "150",
+      "name": "Mewtwo",
+      "categories": [7]
+    },
+    {
+      "id": "151",
+      "name": "Mew",
+      "categories": [7]
     }
   ]
 }
