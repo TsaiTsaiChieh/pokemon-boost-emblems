@@ -1,7 +1,7 @@
 import {useEffect} from 'react'
 
-import LightModeIcon from '@mui/icons-material/LightMode'
-import ModeNightIcon from '@mui/icons-material/ModeNight'
+import Brightness4Icon from '@mui/icons-material/Brightness4'
+import Brightness7Icon from '@mui/icons-material/Brightness7'
 import TranslateIcon from '@mui/icons-material/Translate'
 import {Container} from '@mui/system'
 import {useTranslation} from 'react-i18next'
@@ -42,9 +42,9 @@ const Header = () => {
         </button>
         <button onClick={handleToggleDarkMode} className='text-4xl'>
           {isDarkMode ? (
-            <ModeNightIcon fontSize='large' className='text-dark-4' />
+            <Brightness7Icon fontSize='large' className='text-dark-4' />
           ) : (
-            <LightModeIcon fontSize='large' className='text-light-1' />
+            <Brightness4Icon fontSize='large' className='text-light-1' />
           )}
         </button>
       </div>
