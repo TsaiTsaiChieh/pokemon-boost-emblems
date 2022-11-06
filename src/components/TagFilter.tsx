@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 
 import {Chip} from '@mui/material'
-import classNames from 'classnames'
 
 import {useAppDispatch, useAppSelector} from '../store/hook'
 import {
@@ -19,11 +18,8 @@ interface Props {
 const TagFilter = ({label, id, subFilterName, total}: Props) => {
   const [active, setActive] = useState(false)
   const {reset} = useAppSelector((state) => state.pokemon)
-  const CN = classNames('rounded-md border-1 ', {
-    active: active,
-  })
   const dispatch = useAppDispatch()
-  const span = <span className='scale-65 w-6'>{total}</span>
+  const span = <span className='scale-70 w-6'>({total})</span>
   const handleClick = () => {
     if ((id || id === 0) && subFilterName) {
       dispatch(
@@ -46,12 +42,12 @@ const TagFilter = ({label, id, subFilterName, total}: Props) => {
   return (
     <Chip
       size='small'
-      className={CN}
+      color={active ? 'primary' : 'secondary'}
+      className='rounded-md border-1 flex'
       label={label}
       onClick={handleClick}
       deleteIcon={span}
       onDelete={handleClick}
-      variant={active ? 'filled' : 'outlined'}
     />
   )
 }
