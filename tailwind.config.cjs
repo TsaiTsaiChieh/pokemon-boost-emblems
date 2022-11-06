@@ -23,10 +23,12 @@ module.exports = {
       },
       backgroundImage: {
         'texture': 'url(\'/imgs/texture.png\')',
-        'gloss': 'url(\'/imgs/gloss.png\')',
       },
-      height: {
-        '478': '478px',
+      scale: {
+        '70': '.70',
+      },
+      screens: {
+        'custom-463': '463px',
       },
     },
   },
