@@ -6,7 +6,7 @@ import GradeFilterGroup from './GradeFilterGroup'
 
 const FilterGroups = () => {
   return (
-    <Container className='flex flex-col lg:w-3/4'>
+    <Container className='flex flex-col py-4 rounded-lg mt-6'>
       <GradeFilterGroup />
       <ColorFilterGroup />
       <CharacterFilterGroup />
