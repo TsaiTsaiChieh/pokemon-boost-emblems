@@ -1,6 +1,5 @@
 import {useEffect} from 'react'
 
-import {Avatar} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
 import TagFilter from '../../../components/TagFilter'
@@ -20,7 +19,7 @@ const ColorFilterGroup = () => {
   }, [filter.categories])
 
   return (
-    <div className='flex flex-wrap gap-2'>
+    <div className='flex flex-wrap gap-2 mt-2'>
       {colorOptions.map((ele, i) => (
         <TagFilter
           key={i}

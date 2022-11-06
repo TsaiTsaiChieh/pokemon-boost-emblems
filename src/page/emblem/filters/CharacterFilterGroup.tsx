@@ -21,7 +21,7 @@ const CharacterFilterGroup = () => {
   }, [filter.characters])
 
   return (
-    <div className='flex flex-wrap gap-2'>
+    <div className='flex flex-wrap items-center gap-x-2'>
       <PositiveSwitch />
       {characterOptions.map((ele, i) => (
         <TagFilter key={i} label={ele} id={i} subFilterName='characters'

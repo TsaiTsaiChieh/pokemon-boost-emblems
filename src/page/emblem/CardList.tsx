@@ -5,12 +5,10 @@ const CardList = () => {
   const {cards} = useAppSelector((state) => state.pokemon)
 
   return (
-    <ul className='flex flex-wrap justify-around gap-4 py-8'>
+    <ul className='flex flex-wrap justify-center gap-4 pb-8
+    custom-463:justify-between'>
       {cards.map((ele, i) => (
-        <Card
-          key={i}
-          card={ele}
-        />
+        <Card key={i} card={ele} />
       ))}
     </ul>
   )

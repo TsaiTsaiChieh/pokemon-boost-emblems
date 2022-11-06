@@ -28,7 +28,7 @@ const FreeSoloSearch = () => {
 
   return (
     <div className='flex justify-center'>
-      <Stack spacing={10} sx={{width: 800}}>
+      <Stack spacing={10} sx={{width: '100%'}}>
         <Autocomplete
           value={value}
           onChange={onChange}
