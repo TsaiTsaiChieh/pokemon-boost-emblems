@@ -13,7 +13,7 @@ import {toggleDarkMode, toggleLanguage} from '../../store/reducers/persistSlice'
 const Header = () => {
   const dispatch = useAppDispatch()
   const {isDarkMode, language} = useAppSelector((state) => state.persist)
-  const {i18n} = useTranslation()
+  const {t, i18n} = useTranslation()
   const handleToggleDarkMode = () => {
     dispatch(toggleDarkMode())
   }
@@ -24,6 +24,7 @@ const Header = () => {
   // language
   useEffect(() => {
     i18n.changeLanguage(language)
+    document.title = t('titles.main')
   }, [language])
   // dark mode
   useEffect(() => {
@@ -33,18 +34,18 @@ const Header = () => {
   }, [isDarkMode])
 
   return (
-    <Container className='mb-11'>
+    <Container className='mb-10 py-4 px-8'>
       <div className='flex justify-between'>
-        <div className='text-4xl'>
-          <CatchingPokemonIcon
-            className='text-4xl dark:text-dark-4 text-light-1'
-          />
+        <div className='flex text-4xl items-center'>
+          <CatchingPokemonIcon className='text-4xl dark:text-dark-4
+           text-light-1' />
+          <span className='text-xl ml-1 dark:text-dark-4 text-light-1'>
+            {t('titles.main')}
+          </span>
         </div>
-        <div className='right flex'>
+        <div className='flex gap-8'>
           <button onClick={changeLanguage} className='text-4xl'>
-            <TranslateIcon
-              className='text-4xl dark:text-dark-4 text-light-1'
-            />
+            <TranslateIcon className='text-4xl dark:text-dark-4 text-light-1' />
           </button>
           <button onClick={handleToggleDarkMode} className='text-4xl'>
             {isDarkMode ? (
