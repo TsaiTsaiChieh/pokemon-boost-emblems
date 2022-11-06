@@ -18,7 +18,7 @@ const initialState: PokemonState = {
   stat: {
     characters: new Array(8).fill(0),
     categories: new Array(9).fill(0),
-    levels: [total, total, total],
+    levels: new Array(3).fill(total),
   },
   reset: false,
 }
