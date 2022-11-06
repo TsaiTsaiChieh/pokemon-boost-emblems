@@ -1,3 +1,5 @@
+import {useEffect, useState} from 'react'
+
 import Autocomplete from '@mui/material/Autocomplete'
 import Chip from '@mui/material/Chip'
 import Stack from '@mui/material/Stack'
@@ -9,19 +11,26 @@ import {setFilter} from '../store/reducers/pokemonSlice'
 
 const FreeSoloSearch = () => {
   const dispatch = useAppDispatch()
-  const {filter} = useAppSelector((state) => state.pokemon)
+  const {filter, reset} = useAppSelector((state) => state.pokemon)
   const {t} = useTranslation()
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
+  const [value, setValue] = useState<string[]>([])
   const onChange = (_: React.SyntheticEvent,
     value: string[]) => {
     const ids = value.map((ele) => ele.substring(0, 3))
     dispatch(setFilter({...filter, ids}))
+    setValue(value)
   }
+  // reset
+  useEffect(() => {
+    if (reset) setValue([])
+  }, [reset])
 
   return (
     <div className='flex justify-center'>
       <Stack spacing={10} sx={{width: 800}}>
         <Autocomplete
+          value={value}
           onChange={onChange}
           multiple
           id='tags-filled'
