@@ -1,19 +1,22 @@
-import Header from './components/Header'
+import {ThemeProvider, createTheme} from '@mui/material/styles'
+
+import WholeWrapper from './components/WholeWrapper'
+import {getDesignTokens} from './constants/theme'
 import Emblem from './page/emblem/Emblem'
+import Header from './page/header/Header'
+import {useAppSelector} from './store/hook'
 
 const App = () => {
+  const {isDarkMode} = useAppSelector((state) => state.persist)
+  const theme = createTheme(getDesignTokens(isDarkMode ? 'dark' : 'light'))
+
   return (
-    <div
-      className='bg-light-4 dark:bg-dark-1 min-h-screen
-    bg-texture w-full relative'
-    >
-      <Header />
-      {/* <div
-        id='gloss'
-        className='w-full h-478 fixed bg-gloss'
-      ></div> */}
-      <Emblem />
-    </div>
+    <ThemeProvider theme={theme}>
+      <WholeWrapper>
+        <Header />
+        <Emblem />
+      </WholeWrapper>
+    </ThemeProvider>
   )
 }
 
