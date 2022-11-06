@@ -1,8 +1,12 @@
 {
+  "titles": {
+    "main": "支援徽章"
+  },
   "labels": {
     "id_or_name": "編號或名稱",
     "positive": "正面效果",
-    "negative": "負面效果"
+    "negative": "負面效果",
+    "all": "全部"
   },
   "search_options": {
     "characters": [

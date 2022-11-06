@@ -1,8 +1,10 @@
 {
+  "titles": {
+    "main": "Boost Emblems"
+  },
   "labels": {
     "id_or_name": "ID or Name",
-    "positive": "positive",
-    "negative": "negative"
+    "all": "All"
   },
   "search_options": {
     "characters": [
