@@ -47,8 +47,8 @@ const Card = ({card, pokemonName, props, cons}: Props) => {
       </div>
       <div className='pokemon flex flex-col items-center'>
         <img
-          className='w-20'
-          src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.png`}
+          className='w-20 h-20'
+          src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.webp`}
           alt={pokemonName}
         />
         <label className='text-sm text-light-1 tracking-wide dark:text-dark-4'>
