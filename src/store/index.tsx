@@ -15,7 +15,8 @@ import rootReducer from './rootReducer'
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['persist', 'pokemon'],
+  whitelist: ['persist'],
+  blacklist: ['pokemon'],
 }
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 export const store = configureStore({
