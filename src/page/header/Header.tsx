@@ -7,7 +7,7 @@ import TranslateIcon from '@mui/icons-material/Translate'
 import {Container} from '@mui/system'
 import {useTranslation} from 'react-i18next'
 
-import {useAppSelector, useAppDispatch} from '../../store/hook'
+import {useAppDispatch, useAppSelector} from '../../store/hook'
 import {toggleDarkMode, toggleLanguage} from '../../store/reducers/persistSlice'
 
 const Header = () => {
