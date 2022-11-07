@@ -4,8 +4,6 @@
   },
   "labels": {
     "id_or_name": "編號或名稱",
-    "positive": "正面效果",
-    "negative": "負面效果",
     "all": "全部"
   },
   "search_options": {
@@ -82,6 +80,701 @@
       "id": "012",
       "name": "巴大蝶",
       "categories": [0, 4]
+    },
+    {
+      "id": "013",
+      "name": "獨角蟲",
+      "categories": [0]
+    },
+    {
+      "id": "014",
+      "name": "鐵殼蛹",
+      "categories": [0]
+    },
+    {
+      "id": "015",
+      "name": "大針蜂",
+      "categories": [0, 5]
+    },
+    {
+      "id": "016",
+      "name": "波波",
+      "categories": [4]
+    },
+    {
+      "id": "017",
+      "name": "比比鳥",
+      "categories": [4]
+    },
+    {
+      "id": "018",
+      "name": "大比鳥",
+      "categories": [4]
+    },
+    {
+      "id": "019",
+      "name": "小拉達",
+      "categories": [4]
+    },
+    {
+      "id": "020",
+      "name": "拉達",
+      "categories": [4]
+    },
+    {
+      "id": "021",
+      "name": "烈雀",
+      "categories": [4]
+    },
+    {
+      "id": "022",
+      "name": "大嘴雀",
+      "categories": [4]
+    },
+    {
+      "id": "023",
+      "name": "阿柏蛇",
+      "categories": [5]
+    },
+    {
+      "id": "024",
+      "name": "阿柏怪",
+      "categories": [5]
+    },
+    {
+      "id": "025",
+      "name": "皮卡丘",
+      "categories": [1]
+    },
+    {
+      "id": "026",
+      "name": "雷丘",
+      "categories": [1]
+    },
+    {
+      "id": "027",
+      "name": "穿山鼠",
+      "categories": [6]
+    },
+    {
+      "id": "028",
+      "name": "穿山王",
+      "categories": [6]
+    },
+    {
+      "id": "029",
+      "name": "尼多蘭",
+      "categories": [7]
+    },
+    {
+      "id": "030",
+      "name": "尼多娜",
+      "categories": [7]
+    },
+    {
+      "id": "031",
+      "name": "尼多后",
+      "categories": [7, 6]
+    },
+    {
+      "id": "032",
+      "name": "尼多朗",
+      "categories": [7]
+    },
+    {
+      "id": "033",
+      "name": "尼多力諾",
+      "categories": [7]
+    },
+    {
+      "id": "034",
+      "name": "尼多王",
+      "categories": [7, 6]
+    },
+    {
+      "id": "035",
+      "name": "皮皮",
+      "categories": [8]
+    },
+    {
+      "id": "036",
+      "name": "皮可西",
+      "categories": [8]
+    },
+    {
+      "id": "037",
+      "name": "六尾",
+      "categories": [2]
+    },
+    {
+      "id": "038",
+      "name": "九尾",
+      "categories": [2]
+    },
+    {
+      "id": "039",
+      "name": "胖丁",
+      "categories": [8]
+    },
+    {
+      "id": "040",
+      "name": "胖可丁",
+      "categories": [8]
+    },
+    {
+      "id": "041",
+      "name": "超音蝠",
+      "categories": [5]
+    },
+    {
+      "id": "042",
+      "name": "大嘴蝠",
+      "categories": [5]
+    },
+    {
+      "id": "043",
+      "name": "走路草",
+      "categories": [0]
+    },
+    {
+      "id": "044",
+      "name": "臭臭花",
+      "categories": [0]
+    },
+    {
+      "id": "045",
+      "name": "霸王花",
+      "categories": [0, 5]
+    },
+    {
+      "id": "046",
+      "name": "派拉斯",
+      "categories": [0]
+    },
+    {
+      "id": "047",
+      "name": "派拉斯特",
+      "categories": [0]
+    },
+    {
+      "id": "048",
+      "name": "毛球",
+      "categories": [0]
+    },
+    {
+      "id": "049",
+      "name": "摩魯蛾",
+      "categories": [0, 5]
+    },
+    {
+      "id": "050",
+      "name": "地鼠",
+      "categories": [6]
+    },
+    {
+      "id": "051",
+      "name": "三地鼠",
+      "categories": [6]
+    },
+    {
+      "id": "052",
+      "name": "喵喵",
+      "categories": [4]
+    },
+    {
+      "id": "053",
+      "name": "喵老大",
+      "categories": [4]
+    },
+    {
+      "id": "054",
+      "name": "可達鴨",
+      "categories": [3]
+    },
+    {
+      "id": "055",
+      "name": "哥達鴨",
+      "categories": [3]
+    },
+    {
+      "id": "056",
+      "name": "猴怪",
+      "categories": [6]
+    },
+    {
+      "id": "057",
+      "name": "火爆猴",
+      "categories": [6]
+    },
+    {
+      "id": "058",
+      "name": "卡蒂狗",
+      "categories": [2]
+    },
+    {
+      "id": "059",
+      "name": "風速狗",
+      "categories": [2]
+    },
+    {
+      "id": "060",
+      "name": "蚊香蝌蚪",
+      "categories": [3]
+    },
+    {
+      "id": "061",
+      "name": "蚊香君",
+      "categories": [3]
+    },
+    {
+      "id": "062",
+      "name": "蚊香泳士",
+      "categories": [3, 6]
+    },
+    {
+      "id": "063",
+      "name": "凱西",
+      "categories": [7]
+    },
+    {
+      "id": "064",
+      "name": "勇基拉",
+      "categories": [7]
+    },
+    {
+      "id": "065",
+      "name": "胡地",
+      "categories": [7]
+    },
+    {
+      "id": "066",
+      "name": "腕力",
+      "categories": [6]
+    },
+    {
+      "id": "067",
+      "name": "豪力",
+      "categories": [6]
+    },
+    {
+      "id": "068",
+      "name": "怪力",
+      "categories": [6]
+    },
+    {
+      "id": "069",
+      "name": "喇叭芽",
+      "categories": [0]
+    },
+    {
+      "id": "070",
+      "name": "口呆花",
+      "categories": [0]
+    },
+    {
+      "id": "071",
+      "name": "大食花",
+      "categories": [0, 5]
+    },
+    {
+      "id": "072",
+      "name": "瑪瑙水母",
+      "categories": [3]
+    },
+    {
+      "id": "073",
+      "name": "毒刺水母",
+      "categories": [3, 5]
+    },
+    {
+      "id": "074",
+      "name": "小拳石",
+      "categories": [6]
+    },
+    {
+      "id": "075",
+      "name": "隆隆石",
+      "categories": [6]
+    },
+    {
+      "id": "076",
+      "name": "隆隆岩",
+      "categories": [6]
+    },
+    {
+      "id": "077",
+      "name": "小火馬",
+      "categories": [2]
+    },
+    {
+      "id": "078",
+      "name": "烈焰馬",
+      "categories": [2]
+    },
+    {
+      "id": "079",
+      "name": "呆呆獸",
+      "categories": [3]
+    },
+    {
+      "id": "080",
+      "name": "呆殼獸",
+      "categories": [3, 7]
+    },
+    {
+      "id": "081",
+      "name": "小磁怪",
+      "categories": [1]
+    },
+    {
+      "id": "082",
+      "name": "三合一磁怪",
+      "categories": [1]
+    },
+    {
+      "id": "083",
+      "name": "大蔥鴨",
+      "categories": [4]
+    },
+    {
+      "id": "084",
+      "name": "嘟嘟",
+      "categories": [4]
+    },
+    {
+      "id": "085",
+      "name": "嘟嘟利",
+      "categories": [4]
+    },
+    {
+      "id": "086",
+      "name": "小海獅",
+      "categories": [3]
+    },
+    {
+      "id": "087",
+      "name": "白海獅",
+      "categories": [3]
+    },
+    {
+      "id": "088",
+      "name": "臭泥",
+      "categories": [5]
+    },
+    {
+      "id": "089",
+      "name": "臭臭泥",
+      "categories": [5]
+    },
+    {
+      "id": "090",
+      "name": "大舌貝",
+      "categories": [3]
+    },
+    {
+      "id": "091",
+      "name": "刺甲貝",
+      "categories": [3]
+    },
+    {
+      "id": "092",
+      "name": "鬼斯",
+      "categories": [7]
+    },
+    {
+      "id": "093",
+      "name": "鬼斯通",
+      "categories": [7]
+    },
+    {
+      "id": "094",
+      "name": "耿鬼",
+      "categories": [7, 3]
+    },
+    {
+      "id": "095",
+      "name": "大岩蛇",
+      "categories": [6]
+    },
+    {
+      "id": "096",
+      "name": "催眠貘",
+      "categories": [7]
+    },
+    {
+      "id": "097",
+      "name": "引夢貘人",
+      "categories": [7]
+    },
+    {
+      "id": "098",
+      "name": "大鉗蟹",
+      "categories": [3]
+    },
+    {
+      "id": "099",
+      "name": "巨鉗蟹",
+      "categories": [3]
+    },
+    {
+      "id": "100",
+      "name": "霹靂電球",
+      "categories": [1]
+    },
+    {
+      "id": "101",
+      "name": "頑皮雷彈",
+      "categories": [1]
+    },
+    {
+      "id": "102",
+      "name": "蛋蛋",
+      "categories": [0]
+    },
+    {
+      "id": "103",
+      "name": "椰蛋樹",
+      "categories": [0, 7]
+    },
+    {
+      "id": "104",
+      "name": "卡拉卡拉",
+      "categories": [6]
+    },
+    {
+      "id": "105",
+      "name": "嘎拉嘎拉",
+      "categories": [6]
+    },
+    {
+      "id": "106",
+      "name": "飛腿郎",
+      "categories": [6]
+    },
+    {
+      "id": "107",
+      "name": "快拳郎",
+      "categories": [6]
+    },
+    {
+      "id": "108",
+      "name": "大舌頭",
+      "categories": [4]
+    },
+    {
+      "id": "109",
+      "name": "瓦斯彈",
+      "categories": [7]
+    },
+    {
+      "id": "110",
+      "name": "雙彈瓦斯",
+      "categories": [7]
+    },
+    {
+      "id": "111",
+      "name": "獨角犀牛",
+      "categories": [6]
+    },
+    {
+      "id": "112",
+      "name": "鑽角犀獸",
+      "categories": [6]
+    },
+    {
+      "id": "113",
+      "name": "吉利蛋",
+      "categories": [4]
+    },
+    {
+      "id": "114",
+      "name": "蔓藤怪",
+      "categories": [0]
+    },
+    {
+      "id": "115",
+      "name": "袋獸",
+      "categories": [4]
+    },
+    {
+      "id": "116",
+      "name": "墨海馬",
+      "categories": [3]
+    },
+    {
+      "id": "117",
+      "name": "海刺龍",
+      "categories": [3]
+    },
+    {
+      "id": "118",
+      "name": "角金魚",
+      "categories": [3]
+    },
+    {
+      "id": "119",
+      "name": "金魚王",
+      "categories": [3]
+    },
+    {
+      "id": "120",
+      "name": "海星星",
+      "categories": [3]
+    },
+    {
+      "id": "121",
+      "name": "寶石海星",
+      "categories": [3, 7]
+    },
+    {
+      "id": "122",
+      "name": "魔牆人偶",
+      "categories": [7, 8]
+    },
+    {
+      "id": "123",
+      "name": "飛天螳螂",
+      "categories": [0, 4]
+    },
+    {
+      "id": "124",
+      "name": "迷唇姐",
+      "categories": [3, 7]
+    },
+    {
+      "id": "125",
+      "name": "電擊獸",
+      "categories": [1]
+    },
+    {
+      "id": "126",
+      "name": "鴨嘴火獸",
+      "categories": [2]
+    },
+    {
+      "id": "127",
+      "name": "凱羅斯",
+      "categories": [0]
+    },
+    {
+      "id": "128",
+      "name": "肯泰羅",
+      "categories": [4]
+    },
+    {
+      "id": "129",
+      "name": "鯉魚王",
+      "categories": [3]
+    },
+    {
+      "id": "130",
+      "name": "暴鯉龍",
+      "categories": [3, 4]
+    },
+    {
+      "id": "131",
+      "name": "拉普拉斯",
+      "categories": [3]
+    },
+    {
+      "id": "132",
+      "name": "百變怪",
+      "categories": [4]
+    },
+    {
+      "id": "133",
+      "name": "伊布",
+      "categories": [4]
+    },
+    {
+      "id": "134",
+      "name": "水伊布",
+      "categories": [3]
+    },
+    {
+      "id": "135",
+      "name": "雷伊布",
+      "categories": [1]
+    },
+    {
+      "id": "136",
+      "name": "火伊布",
+      "categories": [2]
+    },
+    {
+      "id": "137",
+      "name": "多邊獸",
+      "categories": [4]
+    },
+    {
+      "id": "138",
+      "name": "菊石獸",
+      "categories": [6]
+    },
+    {
+      "id": "139",
+      "name": "多刺菊石獸",
+      "categories": [6, 3]
+    },
+    {
+      "id": "140",
+      "name": "化石盔",
+      "categories": [6]
+    },
+    {
+      "id": "141",
+      "name": "鐮刀盔",
+      "categories": [6, 3]
+    },
+    {
+      "id": "142",
+      "name": "化石翼龍",
+      "categories": [6, 4]
+    },
+    {
+      "id": "143",
+      "name": "卡比獸",
+      "categories": [4]
+    },
+    {
+      "id": "144",
+      "name": "急凍鳥",
+      "categories": [3, 4]
+    },
+    {
+      "id": "145",
+      "name": "閃電鳥",
+      "categories": [1, 4]
+    },
+    {
+      "id": "146",
+      "name": "火焰鳥",
+      "categories": [2, 4]
+    },
+    {
+      "id": "147",
+      "name": "迷你龍",
+      "categories": [9]
+    },
+    {
+      "id": "148",
+      "name": "哈克龍",
+      "categories": [9]
+    },
+    {
+      "id": "149",
+      "name": "快龍",
+      "categories": [9, 4]
+    },
+    {
+      "id": "150",
+      "name": "超夢",
+      "categories": [7]
+    },
+    {
+      "id": "151",
+      "name": "夢幻",
+      "categories": [7]
     }
   ]
 }
