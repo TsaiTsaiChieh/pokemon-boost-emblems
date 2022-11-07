@@ -10,7 +10,7 @@ interface Props {
 const Card = ({card, pokemonName, props, cons}: Props) => {
   const {id, lv, categories, positive, negative} = card
   const propsCN = classNames('mt-3', {'text-transparent': !props})
-  const consCN = classNames('mt-3', {'text-transparent': !cons})
+  const consCN = classNames('mb-3', {'text-transparent': !cons})
 
   return (
     <li
