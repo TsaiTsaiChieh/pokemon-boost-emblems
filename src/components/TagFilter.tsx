@@ -19,7 +19,11 @@ const TagFilter = ({label, id, subFilterName, total}: Props) => {
   const [active, setActive] = useState(false)
   const {reset} = useAppSelector((state) => state.pokemon)
   const dispatch = useAppDispatch()
-  const span = <span className='scale-70 w-6'>({total})</span>
+  const span = (
+    <span className='scale-70 w-9 pl-1'>
+      ({total?.toString().padStart(3, 0)})
+    </span>
+  )
   const handleClick = () => {
     if ((id || id === 0) && subFilterName) {
       dispatch(
@@ -43,7 +47,7 @@ const TagFilter = ({label, id, subFilterName, total}: Props) => {
     <Chip
       size='small'
       color={active ? 'primary' : 'secondary'}
-      className='rounded-md border-1 flex'
+      className='rounded-md border-1 flex [&>span]:pr-0'
       label={label}
       onClick={handleClick}
       deleteIcon={span}
