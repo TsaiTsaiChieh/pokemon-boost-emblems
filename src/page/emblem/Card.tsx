@@ -1,16 +1,16 @@
-import {useTranslation} from 'react-i18next'
+import classNames from 'classnames'
 
 import {Level} from '../../constants'
 interface Props {
   card: PokemonCardType
+  pokemonName: string
+  props?: string
+  cons?: string
 }
-const Card = ({card}: Props) => {
-  const {id, lv, positive, negative, categories} = card
-  const {t} = useTranslation()
-  const characters: AbilityType[] = t('search_options.characters', {
-    returnObjects: true,
-  })
-  const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
+const Card = ({card, pokemonName, props, cons}: Props) => {
+  const {id, lv, categories, positive, negative} = card
+  const propsCN = classNames('mt-3', {'text-transparent': !props})
+  const consCN = classNames('mt-3', {'text-transparent': !cons})
 
   return (
     <li
@@ -28,11 +28,11 @@ const Card = ({card}: Props) => {
         >
           {id}
         </h6>
-        <span className='mt-3'>
-          {`${characters[positive[0] as number]} ${positive[1]}`}
+        <span className={propsCN}>
+          {props ? `${props} ${positive[1]}` : 'xxx'}
         </span>
-        <span className='mb-3'>
-          {`${characters[negative[0] as number]} ${negative[1]}`}
+        <span className={consCN}>
+          {cons ? `${cons} ${negative[1]}` : 'xxx'}
         </span>
         <div className='categories flex'>
           {categories.map((ele, i) => (
@@ -49,10 +49,10 @@ const Card = ({card}: Props) => {
         <img
           className='w-20'
           src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.png`}
-          alt={pokemonList[parseInt(id) - 1].name}
+          alt={pokemonName}
         />
         <label className='text-sm text-light-1 tracking-wide dark:text-dark-4'>
-          {pokemonList[parseInt(id) - 1].name}
+          {pokemonName}
         </label>
       </div>
     </li>
