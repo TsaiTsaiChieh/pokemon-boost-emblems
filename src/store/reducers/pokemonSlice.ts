@@ -59,7 +59,6 @@ export const pokemonSlice = createSlice({
       }
     },
     setReset: (state, {payload}: PayloadAction<boolean>) => {
-      console.log(payload, '--')
       state.reset = payload
     },
     resetFilter: (state) => {
@@ -92,21 +91,26 @@ export const pokemonSlice = createSlice({
             categories.includes(ele.categories[1]),
         )
       }
-      Array.from({length: 3}).map((_, i) => {
-        state.stat.levels[i] = state.cards.filter(
-          (ele) => ele.lv === i + 1,
-        ).length
-      })
-      Array.from({length: 8}).map((_, i) => {
-        state.stat.characters[i] = state.cards.filter((ele) =>
-          state.filter.positive ? ele.positive[0] === i : ele.negative[0] === i,
-        ).length
-      })
-      Array.from({length: 10}).map((_, i) => {
+      for (let i = 0; i < 10; i++) {
+        // grades
+        if (i < 3) {
+          state.stat.levels[i] = state.cards.filter(
+            (ele) => ele.lv === i + 1,
+          ).length
+        }
+        // ability
+        if (i < 8) {
+          state.stat.characters[i] = state.cards.filter((ele) =>
+            state.filter.positive ?
+              ele.positive[0] === i :
+              ele.negative[0] === i,
+          ).length
+        }
+        // color
         state.stat.categories[i] = state.cards.filter((ele) =>
           ele.categories.includes(i),
         ).length
-      })
+      }
     },
   },
 })
