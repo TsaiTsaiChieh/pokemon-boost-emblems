@@ -39,7 +39,7 @@ const Card = ({card, pokemonName, props, cons}: Props) => {
             <img
               key={i}
               className='w-6'
-              src={`imgs/emblems/color/${ele}.png`}
+              src={`imgs/emblems/color/${ele}.webp`}
               alt={ele.toString()}
             />
           ))}
