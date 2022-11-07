@@ -21,7 +21,7 @@ const TagFilter = ({label, id, subFilterName, total}: Props) => {
   const dispatch = useAppDispatch()
   const span = (
     <span className='scale-70 w-9 pl-1'>
-      ({total?.toString().padStart(3, 0)})
+      ({total?.toString().padStart(3, '0')})
     </span>
   )
   const handleClick = () => {
