@@ -29,27 +29,6 @@ const CardList = () => {
               undefined
           } />
       ))}
-      {/* {cards.map((ele, i) => {
-        // if (i < 10) {
-        return (
-          <Card
-            key={i}
-            card={ele}
-            pokemonName={pokemonList[parseInt(ele.id) - 1].name}
-            props={
-              ele.positive.length
-                ? characters[ele.positive[0] as number]
-                : undefined
-            }
-            cons={
-              ele.negative.length
-                ? characters[ele.negative[0] as number]
-                : undefined
-            }
-          />
-        );
-        // }
-      };)} */}
     </ul>
   )
 }
