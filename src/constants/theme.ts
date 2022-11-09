@@ -1,8 +1,8 @@
 import type {PaletteMode} from '@mui/material'
 
 export const COLORS = {
-  'light-1': '#013237',
-  'light-2': '#4CA771',
+  'light-1': '#353535',
+  'light-2': '#013237',
   'light-3': '#C0E6BA',
   'light-4': '#EAF9E7',
   'dark-1': '#526260',
@@ -16,7 +16,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     mode, ...(mode === 'light') ?
       {
         primary: {
-          main: COLORS['light-1'],
+          main: COLORS['light-2'],
         },
         secondary: {
           main: COLORS['light-3'],
