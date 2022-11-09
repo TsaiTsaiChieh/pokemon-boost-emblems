@@ -17,7 +17,7 @@ interface Props {
 }
 const TagFilter = ({label, id, subFilterName, total}: Props) => {
   const [active, setActive] = useState(false)
-  const {reset} = useAppSelector((state) => state.pokemon)
+  const {filter} = useAppSelector((state) => state.pokemon)
   const dispatch = useAppDispatch()
   const span = (
     <span className='scale-70 w-9 pl-1'>
@@ -32,16 +32,32 @@ const TagFilter = ({label, id, subFilterName, total}: Props) => {
       setActive(!active)
     } else {
       // reset
-      dispatch(setReset(true))
+      // dispatch(
+      //   toggleSubFilterById({id: [], active: true, levels: []}),
+      // )
+      // console.log('okokokk', id)
+      // dispatch(setReset(true))
       dispatch(resetFilter())
+      setActive(true)
     }
   }
   useEffect(() => {
-    if (reset) {
+    if (subFilterName && !filter[subFilterName].length) {
       setActive(false)
-      dispatch(setReset(false))
+    } else if (!subFilterName) {
+      // setActive(false)
     }
-  }, [reset])
+  }, [subFilterName])
+
+  // useEffect(() => {
+  //   if (reset && (id || id === 0)) {
+  //     console.log(id)
+  //     // setActive(false)
+  //     dispatch(setReset(false))
+  //   } else {
+
+  //   }
+  // }, [reset])
 
   return (
     <Chip
