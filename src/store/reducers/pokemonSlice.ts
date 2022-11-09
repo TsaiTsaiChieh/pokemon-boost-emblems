@@ -13,7 +13,6 @@ const basicCards: PokemonCardType[] = abilities.map((ele: AbilityType) => {
 })
 const initialState: PokemonState = {
   cards: basicCards,
-  tmpCards: basicCards,
   filter: {
     ids: [],
     characters: [],
@@ -58,13 +57,12 @@ export const pokemonSlice = createSlice({
       }
     },
     resetFilter: (state) => {
-      state.cards = state.tmpCards
       state.filter = initialState.filter
     },
     setFilter: (state, {payload}: PayloadAction<FilterType>) => {
       const {ids, characters, positive, levels, categories} = payload
       state.filter = payload
-      state.cards = state.tmpCards
+      state.cards = initialState.cards
       if (ids.length) {
         state.cards = state.cards.filter((ele) => ids.includes(ele.id))
       }
