@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 
 import Autocomplete from '@mui/material/Autocomplete'
 import Chip from '@mui/material/Chip'
@@ -11,7 +11,8 @@ import {setFilter} from '../store/reducers/pokemonSlice'
 
 const FreeSoloSearch = () => {
   const dispatch = useAppDispatch()
-  const {filter, reset} = useAppSelector((state) => state.pokemon)
+  const {filter} = useAppSelector((state) => state.pokemon)
+  const {ids, characters, categories, levels} = filter
   const {t} = useTranslation()
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
   const [value, setValue] = useState<string[]>([])
@@ -23,8 +24,15 @@ const FreeSoloSearch = () => {
   }
   // reset
   useEffect(() => {
-    if (reset) setValue([])
-  }, [reset])
+    if (
+      !ids.length &&
+      !characters.length &&
+      !categories.length &&
+      !levels.length
+    ) {
+      setValue([])
+    }
+  }, [ids, characters, categories, levels])
 
   return (
     <div className='flex justify-start custom-1153:mr-12'>
