@@ -1,22 +1,15 @@
-import {useEffect} from 'react'
-
 import {useTranslation} from 'react-i18next'
 
 import TagFilter from '../../../components/TagFilter'
-import {useAppDispatch, useAppSelector} from '../../../store/hook'
-import {setFilter} from '../../../store/reducers/pokemonSlice'
+import {useAppSelector} from '../../../store/hook'
 
 const GradeFilterGroup = () => {
-  const dispatch = useAppDispatch()
-  const {filter, stat, cards} = useAppSelector((state) => state.pokemon)
+  const {stat, cards} = useAppSelector((state) => state.pokemon)
   const {t} = useTranslation()
   const gradeOptions: string[] = t('search_options.grades', {
     returnObjects: true,
   })
 
-  useEffect(() => {
-    dispatch(setFilter({...filter}))
-  }, [filter.levels])
 
   return (
     <div className='flex flex-wrap gap-2'>

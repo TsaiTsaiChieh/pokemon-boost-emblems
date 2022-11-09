@@ -1,24 +1,15 @@
-import {useEffect} from 'react'
-
 import {useTranslation} from 'react-i18next'
 
 import TagFilter from '../../../components/TagFilter'
-import {useAppDispatch, useAppSelector} from '../../../store/hook'
-import {setFilter} from '../../../store/reducers/pokemonSlice'
+import {useAppSelector} from '../../../store/hook'
 import PositiveSwitch from './PositiveSwitch'
 
 const CharacterFilterGroup = () => {
-  const dispatch = useAppDispatch()
-  const {filter, stat} = useAppSelector((state) => state.pokemon)
+  const {stat} = useAppSelector((state) => state.pokemon)
   const {t} = useTranslation()
   const characterOptions: string[] = t('search_options.characters', {
     returnObjects: true,
   })
-
-  // change characters will trigger search action
-  useEffect(() => {
-    dispatch(setFilter({...filter}))
-  }, [filter.characters])
 
   return (
     <div className='flex flex-wrap items-center gap-x-2'>
