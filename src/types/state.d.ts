@@ -4,7 +4,6 @@ interface PersistState {
 }
 interface PokemonState {
   cards: PokemonCardType[]
-  tmpCards: readonly PokemonCardType[] // keeping the original card
   filter: FilterType
   stat: {[key in FilterArrayFieldType]: number[]}
 }
