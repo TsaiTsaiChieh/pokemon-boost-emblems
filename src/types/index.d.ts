@@ -12,7 +12,8 @@ type AbilityType = {
   positive: (number | string)[]
   negative: (number | string)[]
 }
-type PokemonCardType = PokemonType & AbilityType
+// Should rm name, due to it comes from useTranslation
+type PokemonCardType = Omit<PokemonType & AbilityType, 'name'>
 type FilterArrayField = {
   characters: number[] // ability
   categories: number[] // color
