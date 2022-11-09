@@ -34,758 +34,607 @@
   "pokemon": [
     {
       "id": "001",
-      "name": "Bulbasaur",
-      "categories": [0]
+      "name": "Bulbasaur"
     },
     {
       "id": "002",
-      "name": "Ivysaur",
-      "categories": [0]
+      "name": "Ivysaur"
     },
     {
       "id": "003",
-      "name": "Venusaur",
-      "categories": [0]
+      "name": "Venusaur"
     },
     {
       "id": "004",
-      "name": "Charmander",
-      "categories": [2]
+      "name": "Charmander"
     },
     {
       "id": "005",
-      "name": "Charmeleon",
-      "categories": [2]
+      "name": "Charmeleon"
     },
     {
       "id": "006",
-      "name": "Charizard",
-      "categories": [2]
+      "name": "Charizard"
     },
     {
       "id": "007",
-      "name": "Squirtle",
-      "categories": [3]
+      "name": "Squirtle"
     },
     {
       "id": "008",
-      "name": "Wartortle",
-      "categories": [3]
+      "name": "Wartortle"
     },
     {
       "id": "009",
-      "name": "Blastoise",
-      "categories": [3]
+      "name": "Blastoise"
     },
     {
       "id": "010",
-      "name": "Caterpie",
-      "categories": [0]
+      "name": "Caterpie"
     },
     {
       "id": "011",
-      "name": "Metapod",
-      "categories": [0]
+      "name": "Metapod"
     },
     {
       "id": "012",
-      "name": "Butterfree",
-      "categories": [0, 4]
+      "name": "Butterfree"
     },
     {
       "id": "013",
-      "name": "Weedle",
-      "categories": [0]
+      "name": "Weedle"
     },
     {
       "id": "014",
-      "name": "Kakuna",
-      "categories": [0]
+      "name": "Kakuna"
     },
     {
       "id": "015",
-      "name": "Beedrill",
-      "categories": [0, 5]
+      "name": "Beedrill"
     },
     {
       "id": "016",
-      "name": "Pidgey",
-      "categories": [4]
+      "name": "Pidgey"
     },
     {
       "id": "017",
-      "name": "Pidgeotto",
-      "categories": [4]
+      "name": "Pidgeotto"
     },
     {
       "id": "018",
-      "name": "Pidgeot",
-      "categories": [4]
+      "name": "Pidgeot"
     },
     {
       "id": "019",
-      "name": "Rattata",
-      "categories": [4]
+      "name": "Rattata"
     },
     {
       "id": "020",
-      "name": "Raticate",
-      "categories": [4]
+      "name": "Raticate"
     },
     {
       "id": "021",
-      "name": "Spearow",
-      "categories": [4]
+      "name": "Spearow"
     },
     {
       "id": "022",
-      "name": "Fearow",
-      "categories": [4]
+      "name": "Fearow"
     },
     {
       "id": "023",
-      "name": "Ekans",
-      "categories": [5]
+      "name": "Ekans"
     },
     {
       "id": "024",
-      "name": "Arbok",
-      "categories": [5]
+      "name": "Arbok"
     },
     {
       "id": "025",
-      "name": "Pikachu",
-      "categories": [1]
+      "name": "Pikachu"
     },
     {
       "id": "026",
-      "name": "Raichu",
-      "categories": [1]
+      "name": "Raichu"
     },
     {
       "id": "027",
-      "name": "Sandshrew",
-      "categories": [6]
+      "name": "Sandshrew"
     },
     {
       "id": "028",
-      "name": "Sandslash",
-      "categories": [6]
+      "name": "Sandslash"
     },
     {
       "id": "029",
-      "name": "Nidoran♀",
-      "categories": [7]
+      "name": "Nidoran♀"
     },
     {
       "id": "030",
-      "name": "Nidorina",
-      "categories": [7]
+      "name": "Nidorina"
     },
     {
       "id": "031",
-      "name": "Nidoqueen",
-      "categories": [7, 6]
+      "name": "Nidoqueen"
     },
     {
       "id": "032",
-      "name": "Nidoran♂",
-      "categories": [7]
+      "name": "Nidoran♂"
     },
     {
       "id": "033",
-      "name": "Nidorino",
-      "categories": [7]
+      "name": "Nidorino"
     },
     {
       "id": "034",
-      "name": "Nidoking",
-      "categories": [7, 6]
+      "name": "Nidoking"
     },
     {
       "id": "035",
-      "name": "Clefairy",
-      "categories": [8]
+      "name": "Clefairy"
     },
     {
       "id": "036",
-      "name": "Clefable",
-      "categories": [8]
+      "name": "Clefable"
     },
     {
       "id": "037",
-      "name": "Vulpix",
-      "categories": [2]
+      "name": "Vulpix"
     },
     {
       "id": "038",
-      "name": "Ninetales",
-      "categories": [2]
+      "name": "Ninetales"
     },
     {
       "id": "039",
-      "name": "Jigglypuff",
-      "categories": [8]
+      "name": "Jigglypuff"
     },
     {
       "id": "040",
-      "name": "Wigglytuff",
-      "categories": [8]
+      "name": "Wigglytuff"
     },
     {
       "id": "041",
-      "name": "Zubat",
-      "categories": [5]
+      "name": "Zubat"
     },
     {
       "id": "042",
-      "name": "Golbat",
-      "categories": [5]
+      "name": "Golbat"
     },
     {
       "id": "043",
-      "name": "Oddish",
-      "categories": [0]
+      "name": "Oddish"
     },
     {
       "id": "044",
-      "name": "Gloom",
-      "categories": [0]
+      "name": "Gloom"
     },
     {
       "id": "045",
-      "name": "Vileplume",
-      "categories": [0, 5]
+      "name": "Vileplume"
     },
     {
       "id": "046",
-      "name": "Paras",
-      "categories": [0]
+      "name": "Paras"
     },
     {
       "id": "047",
-      "name": "Parasect",
-      "categories": [0]
+      "name": "Parasect"
     },
     {
       "id": "048",
-      "name": "Venonat",
-      "categories": [0]
+      "name": "Venonat"
     },
     {
       "id": "049",
-      "name": "Venomoth",
-      "categories": [0, 5]
+      "name": "Venomoth"
     },
     {
       "id": "050",
-      "name": "Diglett",
-      "categories": [6]
+      "name": "Diglett"
     },
     {
       "id": "051",
-      "name": "Dugtrio",
-      "categories": [6]
+      "name": "Dugtrio"
     },
     {
       "id": "052",
-      "name": "Meowth",
-      "categories": [4]
+      "name": "Meowth"
     },
     {
       "id": "053",
-      "name": "Persian",
-      "categories": [4]
+      "name": "Persian"
     },
     {
       "id": "054",
-      "name": "Psyduck",
-      "categories": [3]
+      "name": "Psyduck"
     },
     {
       "id": "055",
-      "name": "Golduck",
-      "categories": [3]
+      "name": "Golduck"
     },
     {
       "id": "056",
-      "name": "Mankey",
-      "categories": [6]
+      "name": "Mankey"
     },
     {
       "id": "057",
-      "name": "Primeape",
-      "categories": [6]
+      "name": "Primeape"
     },
     {
       "id": "058",
-      "name": "Growlithe",
-      "categories": [2]
+      "name": "Growlithe"
     },
     {
       "id": "059",
-      "name": "Arcanine",
-      "categories": [2]
+      "name": "Arcanine"
     },
     {
       "id": "060",
-      "name": "Poliwag",
-      "categories": [3]
+      "name": "Poliwag"
     },
     {
       "id": "061",
-      "name": "Poliwhirl",
-      "categories": [3]
+      "name": "Poliwhirl"
     },
     {
       "id": "062",
-      "name": "Poliwrath",
-      "categories": [3, 6]
+      "name": "Poliwrath"
     },
     {
       "id": "063",
-      "name": "Abra",
-      "categories": [7]
+      "name": "Abra"
     },
     {
       "id": "064",
-      "name": "Kadabra",
-      "categories": [7]
+      "name": "Kadabra"
     },
     {
       "id": "065",
-      "name": "Alakazam",
-      "categories": [7]
+      "name": "Alakazam"
     },
     {
       "id": "066",
-      "name": "Machop",
-      "categories": [6]
+      "name": "Machop"
     },
     {
       "id": "067",
-      "name": "Machoke",
-      "categories": [6]
+      "name": "Machoke"
     },
     {
       "id": "068",
-      "name": "Machamp",
-      "categories": [6]
+      "name": "Machamp"
     },
     {
       "id": "069",
-      "name": "Bellsprout",
-      "categories": [0]
+      "name": "Bellsprout"
     },
     {
       "id": "070",
-      "name": "Weepinbell",
-      "categories": [0]
+      "name": "Weepinbell"
     },
     {
       "id": "071",
-      "name": "Victreebel",
-      "categories": [0, 5]
+      "name": "Victreebel"
     },
     {
       "id": "072",
-      "name": "Tentacool",
-      "categories": [3]
+      "name": "Tentacool"
     },
     {
       "id": "073",
-      "name": "Tentacruel",
-      "categories": [3, 5]
+      "name": "Tentacruel"
     },
     {
       "id": "074",
-      "name": "Geodude",
-      "categories": [6]
+      "name": "Geodude"
     },
     {
       "id": "075",
-      "name": "Graveler",
-      "categories": [6]
+      "name": "Graveler"
     },
     {
       "id": "076",
-      "name": "Golem",
-      "categories": [6]
+      "name": "Golem"
     },
     {
       "id": "077",
-      "name": "Ponyta",
-      "categories": [2]
+      "name": "Ponyta"
     },
     {
       "id": "078",
-      "name": "Rapidash",
-      "categories": [2]
+      "name": "Rapidash"
     },
     {
       "id": "079",
-      "name": "Slowpoke",
-      "categories": [3]
+      "name": "Slowpoke"
     },
     {
       "id": "080",
-      "name": "Slowbro",
-      "categories": [3, 7]
+      "name": "Slowbro"
     },
     {
       "id": "081",
-      "name": "Magnemite",
-      "categories": [1]
+      "name": "Magnemite"
     },
     {
       "id": "082",
-      "name": "Magneton",
-      "categories": [1]
+      "name": "Magneton"
     },
     {
       "id": "083",
-      "name": "Farfetch'd",
-      "categories": [4]
+      "name": "Farfetch'd"
     },
     {
       "id": "084",
-      "name": "Doduo",
-      "categories": [4]
+      "name": "Doduo"
     },
     {
       "id": "085",
-      "name": "Dodrio",
-      "categories": [4]
+      "name": "Dodrio"
     },
     {
       "id": "086",
-      "name": "Seel",
-      "categories": [3]
+      "name": "Seel"
     },
     {
       "id": "087",
-      "name": "Dewgong",
-      "categories": [3]
+      "name": "Dewgong"
     },
     {
       "id": "088",
-      "name": "Grimer",
-      "categories": [5]
+      "name": "Grimer"
     },
     {
       "id": "089",
-      "name": "Muk",
-      "categories": [5]
+      "name": "Muk"
     },
     {
       "id": "090",
-      "name": "Shellder",
-      "categories": [3]
+      "name": "Shellder"
     },
     {
       "id": "091",
-      "name": "Cloyster",
-      "categories": [3]
+      "name": "Cloyster"
     },
     {
       "id": "092",
-      "name": "Gastly",
-      "categories": [7]
+      "name": "Gastly"
     },
     {
       "id": "093",
-      "name": "Haunter",
-      "categories": [7]
+      "name": "Haunter"
     },
     {
       "id": "094",
-      "name": "Gengar",
-      "categories": [7, 3]
+      "name": "Gengar"
     },
     {
       "id": "095",
-      "name": "Onix",
-      "categories": [6]
+      "name": "Onix"
     },
     {
       "id": "096",
-      "name": "Drowzee",
-      "categories": [7]
+      "name": "Drowzee"
     },
     {
       "id": "097",
-      "name": "Hypno",
-      "categories": [7]
+      "name": "Hypno"
     },
     {
       "id": "098",
-      "name": "Krabby",
-      "categories": [3]
+      "name": "Krabby"
     },
     {
       "id": "099",
-      "name": "Kingler",
-      "categories": [3]
+      "name": "Kingler"
     },
     {
       "id": "100",
-      "name": "Voltorb",
-      "categories": [1]
+      "name": "Voltorb"
     },
     {
       "id": "101",
-      "name": "Electrode",
-      "categories": [1]
+      "name": "Electrode"
     },
     {
       "id": "102",
-      "name": "Exeggcute",
-      "categories": [0]
+      "name": "Exeggcute"
     },
     {
       "id": "103",
-      "name": "Exeggutor",
-      "categories": [0, 7]
+      "name": "Exeggutor"
     },
     {
       "id": "104",
-      "name": "Cubone",
-      "categories": [6]
+      "name": "Cubone"
     },
     {
       "id": "105",
-      "name": "Marowak",
-      "categories": [6]
+      "name": "Marowak"
     },
     {
       "id": "106",
-      "name": "Hitmonlee",
-      "categories": [6]
+      "name": "Hitmonlee"
     },
     {
       "id": "107",
-      "name": "Hitmonchan",
-      "categories": [6]
+      "name": "Hitmonchan"
     },
     {
       "id": "108",
-      "name": "Lickitung",
-      "categories": [4]
+      "name": "Lickitung"
     },
     {
       "id": "109",
-      "name": "Koffing",
-      "categories": [7]
+      "name": "Koffing"
     },
     {
       "id": "110",
-      "name": "Weezing",
-      "categories": [7]
+      "name": "Weezing"
     },
     {
       "id": "111",
-      "name": "Rhyhorn",
-      "categories": [6]
+      "name": "Rhyhorn"
     },
     {
       "id": "112",
-      "name": "Rhydon",
-      "categories": [6]
+      "name": "Rhydon"
     },
     {
       "id": "113",
-      "name": "Chansey",
-      "categories": [4]
+      "name": "Chansey"
     },
     {
       "id": "114",
-      "name": "Tangela",
-      "categories": [0]
+      "name": "Tangela"
     },
     {
       "id": "115",
-      "name": "Kangaskhan",
-      "categories": [4]
+      "name": "Kangaskhan"
     },
     {
       "id": "116",
-      "name": "Horsea",
-      "categories": [3]
+      "name": "Horsea"
     },
     {
       "id": "117",
-      "name": "Seadra",
-      "categories": [3]
+      "name": "Seadra"
     },
     {
       "id": "118",
-      "name": "Goldeen",
-      "categories": [3]
+      "name": "Goldeen"
     },
     {
       "id": "119",
-      "name": "Seaking",
-      "categories": [3]
+      "name": "Seaking"
     },
     {
       "id": "120",
-      "name": "Staryu",
-      "categories": [3]
+      "name": "Staryu"
     },
     {
       "id": "121",
-      "name": "Starmie",
-      "categories": [3, 7]
+      "name": "Starmie"
     },
     {
       "id": "122",
-      "name": "Mr. Mime",
-      "categories": [7, 8]
+      "name": "Mr. Mime"
     },
     {
       "id": "123",
-      "name": "Scyther",
-      "categories": [0, 4]
+      "name": "Scyther"
     },
     {
       "id": "124",
-      "name": "Jynx",
-      "categories": [3, 7]
+      "name": "Jynx"
     },
     {
       "id": "125",
-      "name": "Electabuzz",
-      "categories": [1]
+      "name": "Electabuzz"
     },
     {
       "id": "126",
-      "name": "Magmar",
-      "categories": [2]
+      "name": "Magmar"
     },
     {
       "id": "127",
-      "name": "Pinsir",
-      "categories": [0]
+      "name": "Pinsir"
     },
     {
       "id": "128",
-      "name": "Tauros",
-      "categories": [4]
+      "name": "Tauros"
     },
     {
       "id": "129",
-      "name": "Magikarp",
-      "categories": [3]
+      "name": "Magikarp"
     },
     {
       "id": "130",
-      "name": "Gyarados",
-      "categories": [3, 4]
+      "name": "Gyarados"
     },
     {
       "id": "131",
-      "name": "Lapras",
-      "categories": [3]
+      "name": "Lapras"
     },
     {
       "id": "132",
-      "name": "Ditto",
-      "categories": [4]
+      "name": "Ditto"
     },
     {
       "id": "133",
-      "name": "Eevee",
-      "categories": [4]
+      "name": "Eevee"
     },
     {
       "id": "134",
-      "name": "Vaporeon",
-      "categories": [3]
+      "name": "Vaporeon"
     },
     {
       "id": "135",
-      "name": "Jolteon",
-      "categories": [1]
+      "name": "Jolteon"
     },
     {
       "id": "136",
-      "name": "Flareon",
-      "categories": [2]
+      "name": "Flareon"
     },
     {
       "id": "137",
-      "name": "Porygon",
-      "categories": [4]
+      "name": "Porygon"
     },
     {
       "id": "138",
-      "name": "Omanyte",
-      "categories": [6]
+      "name": "Omanyte"
     },
     {
       "id": "139",
-      "name": "Omastar",
-      "categories": [6, 3]
+      "name": "Omastar"
     },
     {
       "id": "140",
-      "name": "Kabuto",
-      "categories": [6]
+      "name": "Kabuto"
     },
     {
       "id": "141",
-      "name": "Kabutops",
-      "categories": [6, 3]
+      "name": "Kabutops"
     },
     {
       "id": "142",
-      "name": "Aerodactyl",
-      "categories": [6, 4]
+      "name": "Aerodactyl"
     },
     {
       "id": "143",
-      "name": "Snorlax",
-      "categories": [4]
+      "name": "Snorlax"
     },
     {
       "id": "144",
-      "name": "Articuno",
-      "categories": [3, 4]
+      "name": "Articuno"
     },
     {
       "id": "145",
-      "name": "Zapdos",
-      "categories": [1, 4]
+      "name": "Zapdos"
     },
     {
       "id": "146",
-      "name": "Moltres",
-      "categories": [2, 4]
+      "name": "Moltres"
     },
     {
       "id": "147",
-      "name": "Dratini",
-      "categories": [9]
+      "name": "Dratini"
     },
     {
       "id": "148",
-      "name": "Dragonair",
-      "categories": [9]
+      "name": "Dragonair"
     },
     {
       "id": "149",
-      "name": "Dragonite",
-      "categories": [9, 4]
+      "name": "Dragonite"
     },
     {
       "id": "150",
-      "name": "Mewtwo",
-      "categories": [7]
+      "name": "Mewtwo"
     },
     {
       "id": "151",
-      "name": "Mew",
-      "categories": [7]
+      "name": "Mew"
     }
   ]
 }
