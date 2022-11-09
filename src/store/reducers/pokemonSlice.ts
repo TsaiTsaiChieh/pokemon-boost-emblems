@@ -62,29 +62,25 @@ export const pokemonSlice = createSlice({
     searchCards: (state, {payload}: PayloadAction<FilterType>) => {
       const {ids, characters, positive, levels, categories} = payload
       state.filter = payload
+      // state.cards = initialState.cards
       state.cards = initialState.cards
-      if (ids.length) {
-        state.cards = state.cards.filter((ele) => ids.includes(ele.id))
-      }
-      if (characters.length) {
-        state.cards = state.cards.filter((ele) =>
-          characters.includes(
-            positive ?
-              (ele.positive[0] as number) :
-              (ele.negative[0] as number),
-          ),
+        .filter((ele) => (!ids.length ? ele : ids.includes(ele.id)))
+        .filter((ele) =>
+          !characters.length ?
+            ele :
+            characters.includes(
+              positive ?
+                (ele.positive[0] as number) :
+                (ele.negative[0] as number),
+            ),
         )
-      }
-      if (levels.length) {
-        state.cards = state.cards.filter((ele) => levels.includes(ele.lv - 1))
-      }
-      if (categories.length) {
-        state.cards = state.cards.filter(
-          (ele) =>
+        .filter((ele) => (!levels.length ? ele : levels.includes(ele.lv - 1)))
+        .filter((ele) =>
+          !categories.length ?
+            ele :
             categories.includes(ele.categories[0]) ||
             categories.includes(ele.categories[1]),
         )
-      }
       for (let i = 0; i < 10; i++) {
         // grades
         if (i < 3) {
@@ -109,9 +105,6 @@ export const pokemonSlice = createSlice({
   },
 })
 
-export const {
-  toggleSubFilterById,
-  resetFilter,
-  searchCards,
-} = pokemonSlice.actions
+export const {toggleSubFilterById, resetFilter, searchCards} =
+  pokemonSlice.actions
 export default pokemonSlice.reducer
