@@ -2,12 +2,18 @@ import {createSlice} from '@reduxjs/toolkit'
 import type {PayloadAction} from '@reduxjs/toolkit'
 
 import abilities from '../../constants/abilities.json'
+import categories from '../../constants/categories.json'
 
-const total = abilities.length / 3
+const basicCards: PokemonCardType[] = abilities.map((ele: AbilityType) => {
+  const pokedex = parseInt(ele.id) - 1
+  return {
+    ...ele,
+    categories: categories[pokedex].categories,
+  }
+})
 const initialState: PokemonState = {
-  cards: [],
-  tmpCards: [],
-  total, // total pokemon
+  cards: basicCards,
+  tmpCards: basicCards,
   filter: {
     ids: [],
     characters: [],
@@ -16,30 +22,23 @@ const initialState: PokemonState = {
     positive: true,
   },
   stat: {
-    characters: new Array(8).fill(0),
-    categories: new Array(9).fill(0),
-    levels: new Array(3).fill(total),
+    characters: Array.from(
+      {length: 8},
+      (_, i) => abilities.filter((ele) => ele.positive[0] === i).length,
+    ),
+    categories: Array.from(
+      {length: 10},
+      (_, i) =>
+        categories.filter((ele) => ele.categories.includes(i)).length * 3,
+    ),
+    levels: new Array(3).fill(abilities.length / 3),
   },
-  reset: false,
 }
 
 export const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState,
   reducers: {
-    setCard: (state, {payload}: PayloadAction<PokemonCardType>) => {
-      if (state.cards.length !== state.total * 3) {
-        state.cards.push(payload)
-        state.tmpCards.push(payload)
-      }
-    },
-    nameFilter: (state, {payload}: PayloadAction<string[]>) => {
-      state.cards = payload.length ?
-        state.tmpCards.filter((ele) =>
-          payload.includes(`${ele.id} ${ele.name}`),
-        ) :
-        (state.cards = state.tmpCards)
-    },
     toggleSubFilterById: (
       state,
       {
@@ -57,9 +56,6 @@ export const pokemonSlice = createSlice({
         const idx = state.filter[subFilterName].indexOf(id)
         if (idx > -1) state.filter[subFilterName].splice(idx, 1)
       }
-    },
-    setReset: (state, {payload}: PayloadAction<boolean>) => {
-      state.reset = payload
     },
     resetFilter: (state) => {
       state.cards = state.tmpCards
@@ -116,10 +112,7 @@ export const pokemonSlice = createSlice({
 })
 
 export const {
-  setCard,
-  nameFilter,
   toggleSubFilterById,
-  setReset,
   resetFilter,
   setFilter,
 } = pokemonSlice.actions
