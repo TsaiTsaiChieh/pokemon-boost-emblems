@@ -15,7 +15,7 @@ const Card = ({card, pokemonName, props, cons}: Props) => {
   return (
     <li
       className='bg-white list-none w-52 h-32 rounded-lg shadow-light p-3
-    flex justify-between border-2 border-transparent hover:border-light-1
+    flex justify-between border-2 border-transparent hover:border-light-2
     dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
     >
       <div

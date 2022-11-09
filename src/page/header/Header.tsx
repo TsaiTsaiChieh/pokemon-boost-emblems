@@ -8,7 +8,10 @@ import {Container} from '@mui/system'
 import {useTranslation} from 'react-i18next'
 
 import {useAppDispatch, useAppSelector} from '../../store/hook'
-import {toggleDarkMode, toggleLanguage} from '../../store/reducers/persistSlice'
+import {
+  toggleDarkMode,
+  toggleLanguage,
+} from '../../store/reducers/persistSlice'
 
 const Header = () => {
   const dispatch = useAppDispatch()
@@ -37,21 +40,34 @@ const Header = () => {
     <Container className='mb-10 py-4 px-8'>
       <div className='flex justify-between custom-1153:mr-12'>
         <div className='flex text-4xl items-center'>
-          <CatchingPokemonIcon className='text-4xl dark:text-dark-4
-           text-light-1' />
-          <span className='text-xl ml-1 dark:text-dark-4 text-light-1'>
+          <CatchingPokemonIcon
+            className='text-4xl dark:text-dark-4
+           text-light-2'
+          />
+          <span
+            className='text-xl ml-1 dark:text-dark-4 text-light-2 font-bold
+          tracking-wider'
+          >
             {t('titles.main')}
           </span>
         </div>
         <div className='flex gap-8'>
-          <button onClick={changeLanguage} className='text-4xl'>
-            <TranslateIcon className='text-4xl dark:text-dark-4 text-light-1' />
+          <button
+            onClick={changeLanguage}
+            className='text-4xl'
+            title='change language'
+          >
+            <TranslateIcon className='text-4xl dark:text-dark-4 text-light-2' />
           </button>
-          <button onClick={handleToggleDarkMode} className='text-4xl'>
+          <button
+            onClick={handleToggleDarkMode}
+            className='text-4xl'
+            title='change mode'
+          >
             {isDarkMode ? (
               <Brightness7Icon fontSize='large' className='text-dark-4' />
             ) : (
-              <Brightness4Icon fontSize='large' className='text-light-1' />
+              <Brightness4Icon fontSize='large' className='text-light-2' />
             )}
           </button>
         </div>
@@ -59,6 +75,5 @@ const Header = () => {
     </Container>
   )
 }
-
 
 export default Header
