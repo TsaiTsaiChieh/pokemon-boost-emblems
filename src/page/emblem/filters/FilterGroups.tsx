@@ -3,7 +3,7 @@ import {useEffect} from 'react'
 import {Container} from '@mui/material'
 
 import {useAppDispatch, useAppSelector} from '../../../store/hook'
-import {setFilter} from '../../../store/reducers/pokemonSlice'
+import {searchCards} from '../../../store/reducers/pokemonSlice'
 import CharacterFilterGroup from './CharacterFilterGroup'
 import ColorFilterGroup from './ColorFilterGroup'
 import GradeFilterGroup from './GradeFilterGroup'
@@ -14,7 +14,7 @@ const FilterGroups = () => {
   const {ids, characters, categories, levels} = filter
 
   useEffect(() => {
-    dispatch(setFilter({...filter}))
+    dispatch(searchCards({...filter}))
   }, [ids, characters, categories, levels])
 
   return (

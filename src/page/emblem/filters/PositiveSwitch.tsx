@@ -4,7 +4,7 @@ import {Switch} from '@mui/material'
 import {styled} from '@mui/material/styles'
 
 import {useAppDispatch, useAppSelector} from '../../../store/hook/index'
-import {setFilter} from '../../../store/reducers/pokemonSlice'
+import {searchCards} from '../../../store/reducers/pokemonSlice'
 
 const Android12Switch = styled(Switch)(({theme}) => ({
   'padding': 8,
@@ -42,7 +42,7 @@ const PositiveSwitch = () => {
   const dispatch = useAppDispatch()
   const {filter} = useAppSelector((state) => state.pokemon)
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(setFilter({...filter, positive: e.target.checked}))
+    dispatch(searchCards({...filter, positive: e.target.checked}))
   }
 
   return (

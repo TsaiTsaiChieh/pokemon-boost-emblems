@@ -59,7 +59,7 @@ export const pokemonSlice = createSlice({
     resetFilter: (state) => {
       state.filter = initialState.filter
     },
-    setFilter: (state, {payload}: PayloadAction<FilterType>) => {
+    searchCards: (state, {payload}: PayloadAction<FilterType>) => {
       const {ids, characters, positive, levels, categories} = payload
       state.filter = payload
       state.cards = initialState.cards
@@ -112,6 +112,6 @@ export const pokemonSlice = createSlice({
 export const {
   toggleSubFilterById,
   resetFilter,
-  setFilter,
+  searchCards,
 } = pokemonSlice.actions
 export default pokemonSlice.reducer

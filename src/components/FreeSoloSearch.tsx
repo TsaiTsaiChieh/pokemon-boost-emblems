@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState} from 'react'
+import {useEffect, useState} from 'react'
 
 import Autocomplete from '@mui/material/Autocomplete'
 import Chip from '@mui/material/Chip'
@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField'
 import {useTranslation} from 'react-i18next'
 
 import {useAppDispatch, useAppSelector} from '../store/hook'
-import {setFilter} from '../store/reducers/pokemonSlice'
+import {searchCards} from '../store/reducers/pokemonSlice'
 
 const FreeSoloSearch = () => {
   const dispatch = useAppDispatch()
@@ -19,7 +19,7 @@ const FreeSoloSearch = () => {
   const onChange = (_: React.SyntheticEvent,
     value: string[]) => {
     const ids = value.map((ele) => ele.substring(0, 3))
-    dispatch(setFilter({...filter, ids}))
+    dispatch(searchCards({...filter, ids}))
     setValue(value)
   }
   // reset
