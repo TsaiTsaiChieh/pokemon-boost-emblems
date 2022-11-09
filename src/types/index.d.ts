@@ -4,7 +4,6 @@ type FilterArrayFieldType = 'characters' | 'categories' | 'levels'
 type PokemonType = {
   id: string
   name: string
-  categories: number[]
 }
 type AbilityType = {
   id: string
