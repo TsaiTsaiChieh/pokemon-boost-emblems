@@ -3,12 +3,9 @@ import {useState, useEffect} from 'react'
 import {Chip} from '@mui/material'
 
 import {useAppDispatch, useAppSelector} from '../store/hook'
-import {
-  resetFilter,
-  setReset,
-  toggleSubFilterById,
-} from '../store/reducers/pokemonSlice'
+import {resetFilter, toggleSubFilterById} from '../store/reducers/pokemonSlice'
 
+// reset button doesn't have id and subFilterName Props
 interface Props {
   id?: number
   label: string
@@ -16,8 +13,14 @@ interface Props {
   total?: number
 }
 const TagFilter = ({label, id, subFilterName, total}: Props) => {
-  const [active, setActive] = useState(false)
   const {filter} = useAppSelector((state) => state.pokemon)
+  const subFiltersIsEmpty = !filter.ids.length &&
+    !filter.characters.length &&
+    !filter.categories.length &&
+    !filter.levels.length
+  const [active, setActive] = useState(
+    subFilterName ? false : subFiltersIsEmpty,
+  )
   const dispatch = useAppDispatch()
   const span = (
     <span className='scale-70 w-9 pl-1'>
@@ -25,39 +28,29 @@ const TagFilter = ({label, id, subFilterName, total}: Props) => {
     </span>
   )
   const handleClick = () => {
-    if ((id || id === 0) && subFilterName) {
-      dispatch(
-        toggleSubFilterById({id: id!, active: !active, subFilterName}),
-      )
-      setActive(!active)
-    } else {
-      // reset
-      // dispatch(
-      //   toggleSubFilterById({id: [], active: true, levels: []}),
-      // )
-      // console.log('okokokk', id)
-      // dispatch(setReset(true))
-      dispatch(resetFilter())
-      setActive(true)
-    }
+    subFilterName ? dispatch(
+      toggleSubFilterById({id: id!, active: !active, subFilterName}),
+    ) : dispatch(resetFilter())
+    setActive(!active)
   }
+
   useEffect(() => {
     if (subFilterName && !filter[subFilterName].length) {
       setActive(false)
-    } else if (!subFilterName) {
-      // setActive(false)
+      // 點選全部且無其他 filter 時，全部要為 active
+    } else if (!subFilterName && subFiltersIsEmpty) {
+      setActive(true)
+      // 有其他 filter 時，全部不為 active
+    } else if (
+      !subFilterName &&
+      (filter.ids.length ||
+        filter.characters.length ||
+        filter.categories.length ||
+        filter.levels.length)
+    ) {
+      setActive(false)
     }
-  }, [subFilterName])
-
-  // useEffect(() => {
-  //   if (reset && (id || id === 0)) {
-  //     console.log(id)
-  //     // setActive(false)
-  //     dispatch(setReset(false))
-  //   } else {
-
-  //   }
-  // }, [reset])
+  }, [filter])
 
   return (
     <Chip
