@@ -49,6 +49,7 @@ const PositiveSwitch = () => {
     <Android12Switch
       checked={filter.positive}
       onChange={onChange}
+      title='positive switch'
     />
   )
 }
