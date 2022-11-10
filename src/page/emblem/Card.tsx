@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import {v4 as uuidv4} from 'uuid'
 
 import {Level} from '../../constants'
 interface Props {
@@ -37,7 +38,7 @@ const Card = ({card, pokemonName, props, cons}: Props) => {
         <div className='categories flex'>
           {categories.map((ele, i) => (
             <img
-              key={i}
+              key={uuidv4()}
               className='w-6'
               src={`imgs/emblems/color/${ele}.webp`}
               alt={ele.toString()}

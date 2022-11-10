@@ -1,4 +1,5 @@
 import {useTranslation} from 'react-i18next'
+import {v4 as uuidv4} from 'uuid'
 
 import {useAppSelector} from '../../store/hook'
 import Card from './Card'
@@ -14,8 +15,8 @@ const CardList = () => {
   return (
     <ul className='flex flex-wrap justify-center gap-4 pb-8
     custom-481:justify-between custom-1153:justify-start'>
-      {cards.map((ele, i) => (
-        <Card key={i}
+      {cards.map((ele) => (
+        <Card key={uuidv4()}
           card={ele}
           pokemonName={pokemonList[parseInt(ele.id) - 1].name}
           props={
