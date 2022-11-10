@@ -49,7 +49,6 @@ const PositiveSwitch = () => {
     <Android12Switch
       checked={filter.positive}
       onChange={onChange}
-      aria-label='positive switch'
     />
   )
 }
