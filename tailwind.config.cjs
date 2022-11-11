@@ -31,6 +31,9 @@ module.exports = {
         'custom-481': '481px',
         'custom-1184': '1184px',
       },
+      margin: {
+        '1.75': '7px',
+      },
     },
   },
   plugins: [],
