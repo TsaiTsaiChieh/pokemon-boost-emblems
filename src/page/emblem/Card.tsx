@@ -43,7 +43,7 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
           {categories.map((ele) => (
             <img
               key={uuidv4()}
-              className='w-6'
+              className='w-6 h-6'
               src={`imgs/emblems/color/${ele}.webp`}
               alt={ele.toString()}
             />
