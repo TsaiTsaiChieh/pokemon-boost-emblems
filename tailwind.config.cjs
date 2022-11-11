@@ -29,7 +29,7 @@ module.exports = {
       },
       screens: {
         'custom-481': '481px',
-        'custom-1153': '1153px',
+        'custom-1184': '1184px',
       },
     },
   },
