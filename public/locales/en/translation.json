@@ -14,7 +14,7 @@
       "Sp. Atk",
       "Sp. Def",
       "Speed",
-      "Crit Rate",
+      "CR",
       "CDR"
     ],
     "grades": ["Bronze", "Sliver", "Gold"],
