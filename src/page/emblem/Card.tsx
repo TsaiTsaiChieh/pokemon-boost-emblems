@@ -1,3 +1,5 @@
+import {forwardRef, Ref} from 'react'
+
 import classNames from 'classnames'
 import {v4 as uuidv4} from 'uuid'
 
@@ -5,19 +7,21 @@ import {Level} from '../../constants'
 interface Props {
   card: PokemonCardType
   pokemonName: string
-  props?: string
-  cons?: string
+  prop?: string
+  con?: string
 }
-const Card = ({card, pokemonName, props, cons}: Props) => {
+export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
+  const {prop, con, card, pokemonName} = props
   const {id, lv, categories, positive, negative} = card
-  const propsCN = classNames('mt-3', {'text-transparent': !props})
-  const consCN = classNames('mb-3', {'text-transparent': !cons})
+  const propsCN = classNames('mt-3', {'text-transparent': !prop})
+  const consCN = classNames('mb-3', {'text-transparent': !con})
 
   return (
     <li
-      className='bg-white list-none w-52 h-32 rounded-lg shadow-light p-3
-    flex justify-between border-2 border-transparent hover:border-light-2
-    dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
+      ref={ref}
+      className='bg-white list-none w-52 h-32 rounded-lg shadow-light p-3 flex
+      justify-between border-2 border-transparent hover:border-light-2
+      dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
     >
       <div
         className='detail flex flex-col text-xs text-light-2
@@ -30,13 +34,13 @@ const Card = ({card, pokemonName, props, cons}: Props) => {
           {id}
         </h6>
         <span className={propsCN}>
-          {props ? `${props} ${positive[1]}` : 'xxx'}
+          {prop ? `${prop} ${positive[1]}` : 'xxx'}
         </span>
         <span className={consCN}>
-          {cons ? `${cons} ${negative[1]}` : 'xxx'}
+          {con ? `${con} ${negative[1]}` : 'xxx'}
         </span>
         <div className='categories flex'>
-          {categories.map((ele, i) => (
+          {categories.map((ele) => (
             <img
               key={uuidv4()}
               className='w-6'
@@ -58,6 +62,6 @@ const Card = ({card, pokemonName, props, cons}: Props) => {
       </div>
     </li>
   )
-}
+})
 
-export default Card
+Card.displayName = 'Card'
