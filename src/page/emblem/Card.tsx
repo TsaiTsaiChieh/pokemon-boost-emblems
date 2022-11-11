@@ -13,13 +13,13 @@ interface Props {
 export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
   const {prop, con, card, pokemonName} = props
   const {id, lv, categories, positive, negative} = card
-  const propsCN = classNames('mt-3', {'text-transparent': !prop})
-  const consCN = classNames('mb-3', {'text-transparent': !con})
+  const propsCN = classNames('mt-2', {'text-transparent': !prop})
+  const consCN = classNames('mb-2', {'text-transparent': !con})
 
   return (
     <li
       ref={ref}
-      className='bg-white list-none w-52 h-32 rounded-lg shadow-light p-3 flex
+      className='bg-white list-none w-44 h-28 rounded-lg shadow-light p-2 flex
       justify-between border-2 border-transparent hover:border-light-2
       dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
     >
@@ -52,7 +52,7 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
       </div>
       <div className='pokemon flex flex-col items-center'>
         <img
-          className='w-20 h-20'
+          className='w-16 h-16'
           src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.webp`}
           alt={pokemonName}
         />
