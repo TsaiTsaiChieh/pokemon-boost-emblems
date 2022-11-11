@@ -7,10 +7,10 @@ import {useAppSelector} from '../../store/hook'
 import {Card} from './Card'
 
 const CardList = () => {
+  const offset = document.documentElement.clientWidth === 591 ? 12 : 30
   const lastItemRef = useRef<any | null>()
   const observer = useRef<IntersectionObserver | null>(null)
   const [page, setPage] = useState(1)
-  const offset = 30
   const {cards} = useAppSelector((state) => state.pokemon)
   const [arr, setArr] = useState<number[]>([])
   const {t} = useTranslation()
