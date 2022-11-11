@@ -36,9 +36,7 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
         <span className={propsCN}>
           {prop ? `${prop} ${positive[1]}` : 'xxx'}
         </span>
-        <span className={consCN}>
-          {con ? `${con} ${negative[1]}` : 'xxx'}
-        </span>
+        <span className={consCN}>{con ? `${con} ${negative[1]}` : 'xxx'}</span>
         <div className='categories flex'>
           {categories.map((ele) => (
             <img
@@ -50,7 +48,7 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
           ))}
         </div>
       </div>
-      <div className='pokemon flex flex-col items-center'>
+      <div className='pokemon flex flex-col items-center mt-1.75'>
         <img
           className='w-16 h-16'
           src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.webp`}
