@@ -1,9 +1,6 @@
 import {useEffect, useState} from 'react'
 
-import Autocomplete from '@mui/material/Autocomplete'
-import Chip from '@mui/material/Chip'
-import Stack from '@mui/material/Stack'
-import TextField from '@mui/material/TextField'
+import {Autocomplete, Chip, Stack, TextField} from '@mui/material'
 import {useTranslation} from 'react-i18next'
 
 import {useAppDispatch, useAppSelector} from '../store/hook'
@@ -35,7 +32,7 @@ const FreeSoloSearch = () => {
   }, [ids, characters, categories, levels])
 
   return (
-    <div className='flex justify-start custom-1153:mr-12'>
+    <div className='flex justify-start custom-1184:mr-5'>
       <Stack spacing={10} sx={{width: '100%'}}>
         <Autocomplete
           value={value}

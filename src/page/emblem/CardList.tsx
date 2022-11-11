@@ -66,7 +66,7 @@ const CardList = () => {
   return (
     <ul
       className='flex flex-wrap justify-center gap-4 pb-8
-    custom-481:justify-between custom-1153:justify-start'
+    custom-481:justify-between custom-1184:justify-start'
     >
       {arr.map((_, i) => {
         // should not render before arr state update finish
