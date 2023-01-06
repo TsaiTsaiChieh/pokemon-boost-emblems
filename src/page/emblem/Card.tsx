@@ -18,8 +18,8 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
   return (
     <li
       ref={ref}
-      className='bg-white list-none w-44 h-28 rounded-lg shadow-light p-2 flex
-      justify-between border-2 border-transparent hover:border-light-2
+      className='bg-white list-none w-[185px] h-28 rounded-lg shadow-light p-2
+      flex justify-between border-2 border-transparent hover:border-light-2
       dark:bg-dark-2 dark:shadow-dark hover:dark:border-dark-4'
     >
       <div

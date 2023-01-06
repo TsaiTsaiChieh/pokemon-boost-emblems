@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <Container className='mb-10 py-4'>
-      <div className='flex justify-between custom-1184:mr-4'>
+      <div className='flex justify-between '>
         <div className='flex text-4xl items-center'>
           <CatchingPokemonIcon
             className='text-4xl dark:text-dark-4

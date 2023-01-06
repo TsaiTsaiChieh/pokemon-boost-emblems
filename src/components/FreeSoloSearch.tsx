@@ -32,7 +32,7 @@ const FreeSoloSearch = () => {
   }, [ids, characters, categories, levels])
 
   return (
-    <div className='flex justify-start custom-1184:mr-5'>
+    <div className='flex justify-start'>
       <Stack spacing={10} sx={{width: '100%'}}>
         <Autocomplete
           value={value}
