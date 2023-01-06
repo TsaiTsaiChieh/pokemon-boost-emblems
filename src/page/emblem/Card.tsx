@@ -1,7 +1,6 @@
 import {forwardRef, Ref} from 'react'
 
 import classNames from 'classnames'
-import {v4 as uuidv4} from 'uuid'
 
 import {Level} from '../../constants'
 interface Props {
@@ -40,7 +39,7 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
         <div className='categories flex'>
           {categories.map((ele) => (
             <img
-              key={uuidv4()}
+              key={ele}
               className='w-6 h-6'
               src={`imgs/emblems/color/${ele}.webp`}
               alt={ele.toString()}
