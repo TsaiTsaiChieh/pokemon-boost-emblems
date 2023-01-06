@@ -24,14 +24,8 @@ module.exports = {
       backgroundImage: {
         'texture': 'url(\'/imgs/texture.png\')',
       },
-      scale: {
-        '70': '.70',
-      },
       screens: {
         'custom-481': '481px',
-      },
-      margin: {
-        '1.75': '7px',
       },
     },
   },
