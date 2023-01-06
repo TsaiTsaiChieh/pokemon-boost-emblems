@@ -48,10 +48,12 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
           ))}
         </div>
       </div>
-      <div className='pokemon flex flex-col items-center mt-1.75'>
+      <div className='pokemon flex flex-col items-center'>
         <img
-          className='w-16 h-16'
-          src={`imgs/emblems/${Level[lv as LevelType]}/${parseInt(id)}.webp`}
+          className='w-[74px] h-[74px]'
+          src={`${import.meta.env.VITE_IMG_URL}/${card.id}${
+            Level[lv as LevelType]
+          }.png`}
           alt={pokemonName}
         />
         <label className='text-sm text-light-1 tracking-wide dark:text-dark-4'>
