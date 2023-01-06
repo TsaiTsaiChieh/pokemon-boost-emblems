@@ -1,7 +1,6 @@
 import {useEffect, useRef, useState} from 'react'
 
 import {useTranslation} from 'react-i18next'
-import {v4 as uuidv4} from 'uuid'
 
 import {useAppSelector} from '../../store/hook'
 import {Card} from './Card'
@@ -12,18 +11,17 @@ const CardList = () => {
   const observer = useRef<IntersectionObserver | null>(null)
   const [page, setPage] = useState(1)
   const {cards} = useAppSelector((state) => state.pokemon)
-  const [arr, setArr] = useState<number[]>([])
+  const [uids, setUids] = useState<string[]>([])
   const {t} = useTranslation()
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
   const characters: string[] = t('search_options.characters', {
     returnObjects: true,
   })
-
   useEffect(() => {
     setPage(1)
-    setArr(
+    setUids(
       Array.from({length: cards.length < offset ? cards.length : offset}).map(
-        (_, i) => i,
+        (_, i) => `${cards[i].id}_${cards[i].lv}`,
       ),
     )
   }, [cards.length])
@@ -43,11 +41,14 @@ const CardList = () => {
             cards.length - offset * page > offset ?
               offset :
               cards.length - offset * page
-          setArr((prev) => [
+          setUids((prev) => [
             ...prev,
             ...Array.from({length: bias})
-              .fill(0)
-              .map((_, i) => i + offset * (newPage - 1)),
+            .map((_, i) => {
+              const idx = i+ offset *(newPage-1)
+              return `${cards[idx].id}_${cards[idx].lv}`
+            }),
+
           ])
           setPage(newPage)
         }
@@ -68,9 +69,9 @@ const CardList = () => {
       className='flex flex-wrap justify-center gap-4 pb-8
     custom-481:justify-between custom-1184:justify-start'
     >
-      {arr.map((_, i) => {
+      {uids.map((uid, i) => {
         // should not render before arr state update finish
-        if (arr.length <= cards.length) {
+        if (uids.length <= cards.length) {
           const card = cards[i]
           const pokemonName = pokemonList[parseInt(card.id) - 1].name
           const prop = card.positive.length ?
@@ -79,10 +80,10 @@ const CardList = () => {
           const con = card.negative.length ?
             characters![card.negative[0] as number] :
             undefined
-          const ref = i === arr.length - 1 ? lastItemRef : null
+          const ref = i === uids.length - 1 ? lastItemRef : null
           return (
             <Card
-              key={uuidv4()}
+              key={uid}
               ref={ref}
               pokemonName={pokemonName}
               card={card}
