@@ -1,19 +1,26 @@
 import {forwardRef, Ref} from 'react'
 
 import classNames from 'classnames'
+import * as i18n from 'i18next'
 
-import {Level} from '../../constants'
+import {Level, Metric} from '../../constants'
+
 interface Props {
   card: PokemonCardType
   pokemonName: string
-  prop?: string
-  con?: string
 }
 export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
-  const {prop, con, card, pokemonName} = props
+  const Characters: string[] = i18n.t('search_options.characters', {
+    returnObjects: true,
+  })
+  const {card, pokemonName} = props
   const {id, lv, categories, positive, negative} = card
-  const propsCN = classNames('mt-2', {'text-transparent': !prop})
-  const consCN = classNames('mb-2', {'text-transparent': !con})
+  const propsCN = classNames('mt-2', {
+    'text-transparent': positive === undefined,
+  })
+  const consCN = classNames('mb-2', {
+    'text-transparent': negative === undefined,
+  })
 
   return (
     <li
@@ -33,9 +40,15 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
           {id}
         </h6>
         <span className={propsCN}>
-          {prop ? `${prop} ${positive[1]}` : 'xxx'}
+          {positive || positive === 0 ?
+            `${Characters[positive]} +${Metric[positive][lv - 1]} ` :
+            'xxx'}
         </span>
-        <span className={consCN}>{con ? `${con} ${negative[1]}` : 'xxx'}</span>
+        <span className={consCN}>
+          {negative || negative === 0 ?
+            `${Characters[negative]} -${Metric[negative][lv - 1]}` :
+            'xxx'}
+        </span>
         <div className='categories flex'>
           {categories.map((ele) => (
             <img
