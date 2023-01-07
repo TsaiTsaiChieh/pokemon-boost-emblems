@@ -3,7 +3,7 @@ import {forwardRef, Ref} from 'react'
 import clsx from 'clsx'
 import * as i18n from 'i18next'
 
-import {Level, Metric} from '../../constants'
+import {Color, Level, Metric} from '../../constants'
 
 interface Props {
   card: PokemonCardType
@@ -46,12 +46,12 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
             'xxx'}
         </span>
         <div className='categories flex'>
-          {categories.map((ele) => (
+          {categories.map((i: number) => (
             <img
-              key={ele}
+              key={i}
               className='w-6 h-6'
-              src={`imgs/emblems/color/${ele}.webp`}
-              alt={ele.toString()}
+              src={`${import.meta.env.VITE_IMG_URL}/sets/${Color[i]}.png`}
+              alt={i.toString()}
             />
           ))}
         </div>
@@ -59,7 +59,7 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
       <div className='pokemon flex flex-col items-center'>
         <img
           className='w-[74px] h-[74px]'
-          src={`${import.meta.env.VITE_IMG_URL}/${card.id}${
+          src={`${import.meta.env.VITE_IMG_URL}/pokedex/${card.id}${
             Level[lv as LevelType]
           }.png`}
           alt={pokemonName}
