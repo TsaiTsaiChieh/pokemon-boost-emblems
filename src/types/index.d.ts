@@ -4,15 +4,15 @@ type FilterArrayFieldType = 'characters' | 'categories' | 'levels'
 type PokemonType = {
   id: string
   name: string
+  lv: number
 }
 type CategoryType = {
   categories: number[]
 }
 type AbilityType = {
   id: string
-  lv: number
-  positive: (number | string)[]
-  negative: (number | string)[]
+  positive?: number
+  negative?: number
 }
 // Should rm name, due to it comes from useTranslation
 type PokemonCardType = Omit<PokemonType & AbilityType & CategoryType, 'name'>
