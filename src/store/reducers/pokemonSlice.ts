@@ -2,15 +2,18 @@ import {createSlice} from '@reduxjs/toolkit'
 import type {PayloadAction} from '@reduxjs/toolkit'
 
 import abilities from '../../constants/abilities.json'
-import categories from '../../constants/categories.json'
 
-const basicCards: PokemonCardType[] = abilities.map((ele: AbilityType) => {
-  const pokedex = parseInt(ele.id) - 1
-  return {
-    ...ele,
-    categories: categories[pokedex].categories,
-  }
-})
+const Level = 3
+const basicCards: PokemonCardType[] = abilities
+  .map((ability) =>
+    // for level
+    Array.from({length: Level}).map((_, lv) => ({
+      ...ability,
+      lv: lv + 1,
+    })),
+  )
+  .flat()
+
 const initialState: PokemonState = {
   cards: basicCards,
   filter: {
@@ -23,12 +26,12 @@ const initialState: PokemonState = {
   stat: {
     characters: Array.from(
       {length: 8},
-      (_, i) => abilities.filter((ele) => ele.positive[0] === i).length,
+      (_, i) => abilities.filter((ele) => ele.positive === i).length,
     ),
     categories: Array.from(
       {length: 10},
       (_, i) =>
-        categories.filter((ele) => ele.categories.includes(i)).length * 3,
+      basicCards.filter((ele) => ele.categories.includes(i)).length * 3,
     ),
     levels: new Array(3).fill(abilities.length / 3),
   },
@@ -62,24 +65,22 @@ export const pokemonSlice = createSlice({
     searchCards: (state, {payload}: PayloadAction<FilterType>) => {
       const {ids, characters, positive, levels, categories} = payload
       state.filter = payload
-      // state.cards = initialState.cards
       state.cards = initialState.cards
         .filter((ele) => (!ids.length ? ele : ids.includes(ele.id)))
         .filter((ele) =>
           !characters.length ?
             ele :
             characters.includes(
-              positive ?
-                (ele.positive[0] as number) :
-                (ele.negative[0] as number),
-            ),
+                // due to positive or negative prop might be undefined
+                positive ? ele.positive ?? -1 : ele.negative ?? -1,
+              ),
         )
         .filter((ele) => (!levels.length ? ele : levels.includes(ele.lv - 1)))
         .filter((ele) =>
           !categories.length ?
             ele :
             categories.includes(ele.categories[0]) ||
-            categories.includes(ele.categories[1]),
+              categories.includes(ele.categories[1]),
         )
       for (let i = 0; i < 10; i++) {
         // grades
@@ -91,9 +92,7 @@ export const pokemonSlice = createSlice({
         // ability
         if (i < 8) {
           state.stat.characters[i] = state.cards.filter((ele) =>
-            state.filter.positive ?
-              ele.positive[0] === i :
-              ele.negative[0] === i,
+            state.filter.positive ? ele.positive === i : ele.negative === i,
           ).length
         }
         // color
