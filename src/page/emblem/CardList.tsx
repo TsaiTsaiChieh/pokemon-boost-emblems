@@ -14,9 +14,6 @@ const CardList = () => {
   const [uids, setUids] = useState<string[]>([])
   const {t} = useTranslation()
   const pokemonList: PokemonType[] = t('pokemon', {returnObjects: true})
-  const characters: string[] = t('search_options.characters', {
-    returnObjects: true,
-  })
   useEffect(() => {
     setPage(1)
     setUids(
@@ -74,12 +71,6 @@ const CardList = () => {
         if (uids.length <= cards.length) {
           const card = cards[i]
           const pokemonName = pokemonList[parseInt(card.id) - 1].name
-          const prop = card.positive.length ?
-            characters![card.positive[0] as number] :
-            undefined
-          const con = card.negative.length ?
-            characters![card.negative[0] as number] :
-            undefined
           const ref = i === uids.length - 1 ? lastItemRef : null
           return (
             <Card
@@ -87,8 +78,6 @@ const CardList = () => {
               ref={ref}
               pokemonName={pokemonName}
               card={card}
-              prop={prop}
-              con={con}
             />
           )
         }
