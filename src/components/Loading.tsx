@@ -1,10 +1,10 @@
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import {useAppSelector} from '../store/hook'
 
 const Loading = () => {
   const {isDarkMode} = useAppSelector((state) => state.persist)
-  const CN = classNames(
+  const CN = clsx(
     'w-full h-screen flex justify-center',
     {'bg-light-4': !isDarkMode},
     {'bg-dark-1': isDarkMode},

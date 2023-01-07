@@ -1,6 +1,6 @@
 import {forwardRef, Ref} from 'react'
 
-import classNames from 'classnames'
+import clsx from 'clsx'
 import * as i18n from 'i18next'
 
 import {Level, Metric} from '../../constants'
@@ -15,12 +15,8 @@ export const Card = forwardRef((props: Props, ref: Ref<HTMLLIElement>) => {
   })
   const {card, pokemonName} = props
   const {id, lv, categories, positive, negative} = card
-  const propsCN = classNames('mt-2', {
-    'text-transparent': positive === undefined,
-  })
-  const consCN = classNames('mb-2', {
-    'text-transparent': negative === undefined,
-  })
+  const propsCN = clsx('mt-2', {'text-transparent': positive === undefined})
+  const consCN = clsx('mb-2', {'text-transparent': negative === undefined})
 
   return (
     <li
