@@ -7,15 +7,11 @@ export const useIntersect = (
   const lastItemRef = useRef<any | null>()
   const observer = useRef<IntersectionObserver | null>(null)
   const [page, setPage] = useState(1)
-  const [uids, setUids] = useState<string[]>([])
-  useEffect(() => {
-    setPage(1)
-    setUids(
-      Array.from({length: cards.length < offset ? cards.length : offset}).map(
-        (_, i) => `${cards[i].id}_${cards[i].lv}`,
-      ),
-    )
-  }, [cards.length])
+  const [uids, setUids] = useState<string[]>(
+    Array.from({length: cards.length < offset ? cards.length : offset}).map(
+      (_, i) => `${cards[i].id}_${cards[i].lv}`,
+    ),
+  )
   useEffect(() => {
     if (page <= Math.ceil(cards.length / offset)) {
       const options = {
